@@ -63,7 +63,7 @@ const steps = [
 const auditData = [
   {
     settore: "Componentistica industriale",
-    luogo: "Provincia di Asti",
+    luogo: "Provincia di Alessandria",
     impianto: "2 compressori scroll da 22 kW — capacità totale 7,4 m³/min",
     metriche: [
       { label: "Portata media rilevata", value: "0,269 m³/min — 3,6% della capacità installata" },
@@ -89,7 +89,7 @@ const auditData = [
     impianto: "1 compressore VSD da 37 kW — produzione su tre turni",
     metriche: [
       { label: "Portata media rilevata", value: "2,3–2,7 m³/min · 98,5% del tempo in carico attivo" },
-      { label: "Distribuzione carico", value: "79,1% del tempo nel range di efficienza" },
+      { label: "Distribuzione carico", value: "79,1% del tempo nel range 25–50% della capacità" },
       { label: "Costo energetico annuale stimato", value: "€ 35.771" },
       { label: "Risparmio con tecnologia IE5", value: "fino a € 8.677/anno — riduzione 24,3%" },
     ],
@@ -182,8 +182,7 @@ export default function AuditEnergetico() {
                   La terza è la filosofia di centrale: una singola macchina di grande potenza
                   che segue l&apos;intero profilo produttivo lavora per molte ore in modulazione ai
                   carichi intermedi, condizione in cui il rendimento specifico è lontano dal
-                  punto ottimale. Nessuna di queste condizioni è identificabile senza dati
-                  strumentali di monitoraggio consumi compressore aria compressa.
+                  punto ottimale. Nessuna di queste condizioni è identificabile senza misura strumentale.
                 </p>
               </div>
             </div>
@@ -240,7 +239,7 @@ export default function AuditEnergetico() {
               <p className="mt-4 text-muted-foreground leading-relaxed">
                 Il sopralluogo per l&apos;installazione della strumentazione richiede circa un&apos;ora.
                 Non è necessario fermare la produzione. Al termine del monitoraggio ricevi il
-                report completo con profilo di carico impianto aria compressa, simulazione
+                report completo con profilo di carico reale, simulazione
                 energetica annuale e scenari di intervento.
               </p>
               <div className="mt-8 flex flex-col sm:flex-row gap-4 items-start">
