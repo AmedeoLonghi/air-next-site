@@ -11,7 +11,7 @@ const navLinks = [
   { label: "Refrigerazione", href: "/refrigerazione-industriale" },
   { label: "Gas Tecnici", href: "/gas-tecnici" },
   { label: "Ottimizza", href: "/ottimizza" },
-  { label: "Case Study", href: "/case-study" },
+  { label: "Caso Studio", href: "/case-study" },
 ];
 
 export function Navbar() {

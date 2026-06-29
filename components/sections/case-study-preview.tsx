@@ -30,7 +30,7 @@ export function CaseStudyPreview() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-10">
           <div>
-            <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">Case study</h2>
+            <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">Caso studio</h2>
             <p className="mt-2 text-muted-foreground">
               Risultati documentati, con dati reali.
             </p>
@@ -42,7 +42,7 @@ export function CaseStudyPreview() {
               "gap-1 self-start sm:self-auto shrink-0"
             )}
           >
-            Tutti i case study
+            Tutti i casi studio
             <ArrowRight size={14} />
           </Link>
         </div>

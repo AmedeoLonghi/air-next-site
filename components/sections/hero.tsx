@@ -29,7 +29,7 @@ export function Hero() {
               href="/case-study"
               className={cn(buttonVariants({ size: "lg", variant: "outline" }))}
             >
-              Vedi i case study
+              Vedi i casi studio
             </Link>
           </div>
           <p className="mt-6 text-xs text-muted-foreground">

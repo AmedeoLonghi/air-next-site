@@ -8,11 +8,11 @@ import { Badge } from "@/components/ui/badge";
 import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Case Study | Impianti Aria Compressa | Air-next",
+  title: "Caso Studio | Impianti Aria Compressa | Air-next",
   description:
     "Risultati documentati da interventi reali su impianti aria compressa industriali. Dati strumentali, risparmio quantificato, analisi tecniche.",
   openGraph: {
-    title: "Case Study | Impianti Aria Compressa | Air-next",
+    title: "Caso Studio | Impianti Aria Compressa | Air-next",
     description:
       "Risultati documentati da interventi reali su impianti aria compressa industriali. Dati strumentali, risparmio quantificato, analisi tecniche.",
   },
@@ -62,7 +62,7 @@ export default function CaseStudy() {
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl">
               <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-5">
-                Case study
+                Caso studio
               </p>
               <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-[3.25rem] leading-tight">
                 Risultati documentati da impianti reali
@@ -76,7 +76,7 @@ export default function CaseStudy() {
           </div>
         </section>
 
-        {/* ── Case study ── */}
+        {/* ── Casi studio ── */}
         <section className="py-20 sm:py-24 bg-muted/40">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="space-y-8">
@@ -123,7 +123,7 @@ export default function CaseStudy() {
                 Altri casi in arrivo
               </h2>
               <p className="text-muted-foreground leading-relaxed">
-                I case study vengono aggiunti man mano che gli interventi completati
+                I casi studio vengono aggiunti man mano che gli interventi completati
                 dispongono di dati strumentali verificati e autorizzazione alla
                 pubblicazione. Non pubblichiamo sintesi qualitative: ogni caso
                 riportato ha un profilo di consumo rilevato e un risparmio calcolato.
