@@ -8,9 +8,6 @@ export function Hero() {
     <section className="bg-background py-20 sm:py-28 lg:py-36">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl">
-          <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-5">
-            Casale Monferrato (AL) · Piemonte · Lombardia · Liguria · Emilia Romagna · Toscana
-          </p>
           <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl leading-tight">
             Aria compressa, gas tecnici e refrigerazione industriale.{" "}
             <span className="text-primary">Con un approccio che parte dai dati.</span>
@@ -35,6 +32,9 @@ export function Hero() {
               Vedi i case study
             </Link>
           </div>
+          <p className="mt-6 text-xs text-muted-foreground">
+            Casale Monferrato (AL) · Piemonte · Lombardia · Liguria · Emilia Romagna · Toscana
+          </p>
         </div>
       </div>
     </section>
