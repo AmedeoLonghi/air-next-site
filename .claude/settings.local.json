@@ -14,7 +14,13 @@
       "Bash(git -C /Users/amedeolonghi/Desktop/air-next-site init)",
       "Bash(git -C /Users/amedeolonghi/Desktop/air-next-site add -A)",
       "Bash(git -C /Users/amedeolonghi/Desktop/air-next-site commit -m 'feat: initialize B2B Next.js site with Tailwind v4 and shadcn/ui *)",
-      "Bash(npm run *)"
+      "Bash(npm run *)",
+      "Bash(npx tsc *)",
+      "Bash(git -C /Users/amedeolonghi/Desktop/air-next-site status)",
+      "Bash(git -C /Users/amedeolonghi/Desktop/air-next-site diff)",
+      "Bash(git -C /Users/amedeolonghi/Desktop/air-next-site add CLAUDE.md app/globals.css app/layout.tsx)",
+      "Bash(git -C /Users/amedeolonghi/Desktop/air-next-site commit -m ' *)",
+      "Bash(git -C /Users/amedeolonghi/Desktop/air-next-site add app/page.tsx components/layout/navbar.tsx components/sections/hero.tsx components/sections/cta.tsx components/sections/features.tsx components/sections/social-proof.tsx components/sections/case-study-preview.tsx components/sections/contact-form.tsx components/sections/macro-aree.tsx components/sections/ottimizza.tsx)"
     ]
   }
 }
