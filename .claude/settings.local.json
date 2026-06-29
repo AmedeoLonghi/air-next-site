@@ -13,7 +13,8 @@
       "Bash(npm_config_cache=/tmp/npm-cache npm run *)",
       "Bash(git -C /Users/amedeolonghi/Desktop/air-next-site init)",
       "Bash(git -C /Users/amedeolonghi/Desktop/air-next-site add -A)",
-      "Bash(git -C /Users/amedeolonghi/Desktop/air-next-site commit -m 'feat: initialize B2B Next.js site with Tailwind v4 and shadcn/ui *)"
+      "Bash(git -C /Users/amedeolonghi/Desktop/air-next-site commit -m 'feat: initialize B2B Next.js site with Tailwind v4 and shadcn/ui *)",
+      "Bash(npm run *)"
     ]
   }
 }
