@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Separator } from "@/components/ui/separator";
 
 const servizi = [
@@ -21,9 +22,14 @@ export function Footer() {
         <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
 
           <div className="col-span-2 md:col-span-1">
-            <Link href="/" className="flex items-center gap-1 font-bold text-lg tracking-tight mb-4">
-              <span className="text-primary">air</span>
-              <span>-next</span>
+            <Link href="/" className="mb-4 inline-block">
+              <Image
+                src="/logo.svg"
+                alt="Air-next"
+                width={1016}
+                height={521}
+                style={{ height: "24px", width: "auto" }}
+              />
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed max-w-xs">
               Soluzioni tecniche per aria compressa, gas tecnici e refrigerazione industriale.
