@@ -8,11 +8,11 @@ import { Badge } from "@/components/ui/badge";
 import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Caso Studio | Impianti Aria Compressa | Air-next",
+  title: "Casi Studio | Impianti Aria Compressa | Air-next",
   description:
     "Risultati documentati da interventi reali su impianti aria compressa industriali. Dati strumentali, risparmio quantificato, analisi tecniche.",
   openGraph: {
-    title: "Caso Studio | Impianti Aria Compressa | Air-next",
+    title: "Casi Studio | Impianti Aria Compressa | Air-next",
     description:
       "Risultati documentati da interventi reali su impianti aria compressa industriali. Dati strumentali, risparmio quantificato, analisi tecniche.",
   },
@@ -62,7 +62,7 @@ export default function CaseStudy() {
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl">
               <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-5">
-                Caso studio
+                Casi studio
               </p>
               <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-[3.25rem] leading-tight">
                 Risultati documentati da impianti reali

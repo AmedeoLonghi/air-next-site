@@ -30,7 +30,7 @@ export function CaseStudyPreview() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-10">
           <div>
-            <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">Caso studio</h2>
+            <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">Casi studio</h2>
             <p className="mt-2 text-muted-foreground">
               Risultati documentati, con dati reali.
             </p>
