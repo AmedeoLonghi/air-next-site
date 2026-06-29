@@ -7,18 +7,20 @@ import { ArrowRight } from "lucide-react";
 
 const caseStudies = [
   {
-    settore: "Industria alimentare",
+    settore: "Componentistica industriale",
     titolo:
-      "Audit su impianto a vite: inefficienza di regolazione identificata e corretta con sostituzione mirata del compressore",
+      "Impianto sovradimensionato al 96%: centrale da 44 kW sostituita con soluzione da 14 kW",
     luogo: "Provincia di Alessandria",
     tag: "Audit energetico",
+    href: "/case-study",
   },
   {
-    settore: "Metalmeccanica",
+    settore: "Automazione industriale",
     titolo:
-      "Ricerca perdite ultrasoniche: rete di distribuzione risanata, pressione di esercizio stabilizzata",
-    luogo: "Provincia di Vercelli",
-    tag: "Ricerca perdite",
+      "Centrale monoblocco da 160 kW sostituita con configurazione modulare con risparmio di €20.280/anno",
+    luogo: "Provincia di Novara",
+    tag: "Audit energetico",
+    href: "/case-study",
   },
 ];
 
@@ -47,16 +49,18 @@ export function CaseStudyPreview() {
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
           {caseStudies.map((cs) => (
-            <Card key={cs.titolo} className="border border-border">
-              <CardContent className="pt-6">
-                <div className="flex items-center gap-2 mb-3">
-                  <Badge variant="secondary">{cs.tag}</Badge>
-                  <span className="text-xs text-muted-foreground">{cs.settore}</span>
-                </div>
-                <h3 className="font-semibold text-base leading-snug mb-3">{cs.titolo}</h3>
-                <p className="text-sm text-muted-foreground">{cs.luogo}</p>
-              </CardContent>
-            </Card>
+            <Link key={cs.titolo} href={cs.href} className="block group">
+              <Card className="border border-border h-full transition-colors group-hover:border-primary/30">
+                <CardContent className="pt-6">
+                  <div className="flex items-center gap-2 mb-3">
+                    <Badge variant="secondary">{cs.tag}</Badge>
+                    <span className="text-xs text-muted-foreground">{cs.settore}</span>
+                  </div>
+                  <h3 className="font-semibold text-base leading-snug mb-3">{cs.titolo}</h3>
+                  <p className="text-sm text-muted-foreground">{cs.luogo}</p>
+                </CardContent>
+              </Card>
+            </Link>
           ))}
         </div>
       </div>
