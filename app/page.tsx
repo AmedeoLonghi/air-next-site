@@ -16,6 +16,7 @@ import { Hero } from "@/components/sections/hero";
 import { MacroAree } from "@/components/sections/macro-aree";
 import { Ottimizza } from "@/components/sections/ottimizza";
 import { ConformitaNormativa } from "@/components/sections/conformita-normativa";
+import { QualitaAria } from "@/components/sections/qualita-aria";
 import { CaseStudyPreview } from "@/components/sections/case-study-preview";
 import { ContactForm } from "@/components/sections/contact-form";
 
@@ -28,6 +29,7 @@ export default function Home() {
         <MacroAree />
         <Ottimizza />
         <ConformitaNormativa />
+        <QualitaAria />
         <CaseStudyPreview />
         <ContactForm />
       </main>
