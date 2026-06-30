@@ -28,25 +28,6 @@ export default function Contatti() {
       <Navbar />
       <main>
 
-        {/* ── Hero minimo ── */}
-        <section className="bg-background pt-20 sm:pt-28 pb-0">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="max-w-2xl">
-              <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-5">
-                Contatti
-              </p>
-              <h1 className="text-4xl font-bold tracking-tight sm:text-5xl leading-tight">
-                Parliamo del tuo impianto
-              </h1>
-              <p className="mt-5 text-lg leading-8 text-muted-foreground">
-                Descrivi il contesto, il problema o quello che vuoi ottimizzare.
-                Rispondo entro 24 ore con una valutazione tecnica preliminare,
-                senza impegno.
-              </p>
-            </div>
-          </div>
-        </section>
-
         {/* ── Form + contatti ── */}
         <ContactForm />
 
@@ -64,8 +45,8 @@ export default function Contatti() {
                   ))}
                 </ul>
                 <p className="mt-4 text-sm text-muted-foreground">
-                  Per interventi su impianti particolarmente rilevanti valutiamo
-                  richieste anche al di fuori di quest&apos;area.
+                  Per interventi fuori da queste regioni, contattaci comunque:
+                  valutiamo caso per caso in base alla rilevanza del progetto.
                 </p>
               </div>
               <div>
@@ -101,7 +82,8 @@ export default function Contatti() {
                   <div>
                     <dt className="font-medium text-foreground">Sede operativa</dt>
                     <dd className="mt-0.5 text-muted-foreground">
-                      Casale Monferrato (AL)
+                      Strada Valenza 4/L Bis<br />
+                      15033 Casale Monferrato (AL)
                     </dd>
                   </div>
                   <div>
@@ -111,6 +93,21 @@ export default function Contatti() {
                 </dl>
               </div>
             </div>
+
+            {/* Mappa */}
+            <div className="mt-10 rounded-xl overflow-hidden border border-border">
+              <iframe
+                title="Sede Air-next — Strada Valenza 4/L Bis, Casale Monferrato"
+                src="https://maps.google.com/maps?q=Strada+Valenza+4+Casale+Monferrato+AL+Italy&output=embed"
+                width="100%"
+                height="320"
+                style={{ border: 0, display: "block" }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
+
           </div>
         </section>
 
