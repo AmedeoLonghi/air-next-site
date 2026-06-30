@@ -16,12 +16,14 @@ export function ConformitaNormativa() {
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16 items-start">
 
           <div>
-            <div className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 mb-6">
-              <FileCheck className="h-5 w-5 text-primary" />
+            <div className="flex items-start gap-4 mb-4">
+              <div className="shrink-0 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
+                <FileCheck className="h-5 w-5 text-primary" />
+              </div>
+              <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">
+                Le attrezzature in pressione hanno obblighi normativi precisi
+              </h2>
             </div>
-            <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">
-              Le attrezzature in pressione hanno obblighi normativi precisi
-            </h2>
             <p className="mt-4 text-muted-foreground leading-relaxed">
               Compressori, serbatoi e reti di distribuzione rientrano negli obblighi del DM 329/2004
               e del D.Lgs. 81/2008. Verifiche periodiche, denunce INAIL, documentazione tecnica:
