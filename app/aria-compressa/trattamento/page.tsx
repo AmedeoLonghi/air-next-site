@@ -47,10 +47,22 @@ const essiccatori = [
       "Il flusso d'aria è raffreddato fino a circa +3 °C da un circuito frigorifero integrato. A quella temperatura l'umidità condensa e viene drenata prima che l'aria torni alla temperatura ambiente. Soluzione adeguata per la maggior parte delle applicazioni industriali che non richiedono basse temperature ambientali o processi con specifiche di purezza più stringenti. Consumo elettrico limitato rispetto agli essiccatori ad adsorbimento.",
   },
   {
-    tipo: "Ad adsorbimento (rigenerativi)",
+    tipo: "Ad adsorbimento — rigenerazione a freddo",
     pdp: "Punto di rugiada: da −20 °C a −70 °C (ISO 8573-1 Classi 1–3)",
     testo:
-      "Due colonne di materiale adsorbente alternano cicli: una colonna assorbe l'umidità dall'aria compressa mentre l'altra si rigenera. Il punto di rugiada raggiungibile dipende dal materiale adsorbente (gel di silice, allumina attivata, setacci molecolari) e dal tipo di rigenerazione (a caldo o a freddo). Indicato per reti esposte a temperature sotto zero, per processi con specifiche di secchezza stringenti e per aria destinata ad applicazioni medicali o farmaceutiche.",
+      "Due colonne di materiale adsorbente (gel di silice, allumina attivata, setacci molecolari) alternano cicli di adsorbimento e rigenerazione. La colonna satura si rigenera utilizzando una quota dell'aria già essiccata — tipicamente il 15 % della portata trattata — che spazza l'adsorbente a pressione ridotta eliminando l'umidità desorbita. Soluzione semplice, senza sorgenti di calore esterne. Il consumo di aria per la rigenerazione aumenta il consumo energetico specifico dell'essiccatore.",
+  },
+  {
+    tipo: "Ad adsorbimento — rigenerazione a caldo",
+    pdp: "Punto di rugiada: da −20 °C a −70 °C (ISO 8573-1 Classi 1–3)",
+    testo:
+      "Il principio è lo stesso della rigenerazione a freddo, ma la colonna satura viene riscaldata esternamente (resistenza elettrica o vapore) prima dello spurgo. Il calore accelera il desorbimento e riduce drasticamente il consumo di aria compressa per la rigenerazione (tipicamente sotto il 2 % contro il 15 % del ciclo a freddo). Il ciclo è più lungo e l'impianto più complesso, ma il costo energetico della rigenerazione è trascurabile. Indicato per portate elevate in cui la perdita del 15 % di aria avrebbe un impatto economico significativo.",
+  },
+  {
+    tipo: "A membrana",
+    pdp: "Punto di rugiada: tipicamente −20 °C a +10 °C (ISO 8573-1 Classi 3–5)",
+    testo:
+      "L'aria compressa percorre un fascio di fibre cave polimeriche semipermeabili. Le molecole d'acqua migrano selettivamente attraverso la parete della fibra verso una corrente di spurgo esterna, mentre l'aria essiccata prosegue all'uscita. Nessuna parte in movimento, nessun consumo elettrico per il processo di separazione. Adatto a installazioni in zone classificate, ambienti remoti o dove la manutenzione periodica è difficoltosa. Le prestazioni dipendono dalla portata di spurgo, dalla temperatura e dalla pressione operativa.",
   },
 ];
 
