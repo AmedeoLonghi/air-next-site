@@ -62,7 +62,7 @@ const tipologie = [
     nome: "Scroll",
     sottotitolo: "spirale eccentrica",
     testo:
-      "Due spirali eccentriche — una fissa, una orbitante — comprimono l'aria per riduzione progressiva del volume delle camere. Oil-free per costruzione, silenzioso, adatto a taglie ridotte. Applicazioni tipiche: laboratori, medicale, processi con requisiti di purezza che escludono la gestione del circuito olio.",
+      "Due spirali eccentriche, una fissa e una orbitante, comprimono l'aria per riduzione progressiva del volume delle camere. Oil-free per costruzione, silenzioso, adatto a taglie ridotte. Applicazioni tipiche: laboratori, medicale, processi con requisiti di purezza che escludono la gestione del circuito olio.",
     href: null,
   },
   {
@@ -75,7 +75,7 @@ const tipologie = [
   },
 ];
 
-const regolazioneIntro = `Soft starter e regolazione della portata sono due cose diverse. Il primo riguarda l’avviamento del motore — riduce la corrente di spunto e rende più dolce la partenza elettrica. Una volta avviato, il compressore lavora secondo la propria logica di regolazione, indipendentemente dal tipo di avviamento installato.`;
+const regolazioneIntro = `Soft starter e regolazione della portata sono due cose diverse. Il primo riguarda l’avviamento del motore: riduce la corrente di spunto e rende più dolce la partenza elettrica. Una volta avviato, il compressore lavora secondo la propria logica di regolazione, indipendentemente dal tipo di avviamento installato.`;
 
 const modalitaRegolazione = [
   {
@@ -86,15 +86,15 @@ const modalitaRegolazione = [
   {
     titolo: "Carico/vuoto (load/unload)",
     testo:
-      "Il sistema più diffuso sui compressori a vite tradizionali. Il motore resta acceso; quando la pressione raggiunge il valore massimo, la valvola di aspirazione chiude e il compressore smette di produrre aria ma continua ad assorbire energia — indicativamente tra il 20% e il 35% della potenza nominale a vuoto, a seconda della macchina. Logica robusta, ma penalizzante dal punto di vista energetico se la macchina passa molto tempo a vuoto.",
+      "Il sistema più diffuso sui compressori a vite tradizionali. Il motore resta acceso; quando la pressione raggiunge il valore massimo, la valvola di aspirazione chiude e il compressore smette di produrre aria ma continua ad assorbire energia, indicativamente tra il 20% e il 35% della potenza nominale a vuoto, a seconda della macchina. Logica robusta, ma penalizzante dal punto di vista energetico se la macchina passa molto tempo a vuoto.",
   },
   {
     titolo: "Modulante",
     testo:
-      "La valvola di aspirazione viene parzializzata per ridurre la portata. Riduce la portata prodotta, ma l'assorbimento elettrico non cala in proporzione — utile in condizioni specifiche, da non confondere con l'efficienza reale di un inverter ben dimensionato.",
+      "La valvola di aspirazione viene parzializzata per ridurre la portata. Riduce la portata prodotta, ma l'assorbimento elettrico non cala in proporzione. Utile in condizioni specifiche, da non confondere con l'efficienza reale di un inverter ben dimensionato.",
   },
   {
-    titolo: "VSD — velocità variabile",
+    titolo: "VSD: velocità variabile",
     testo:
       "La portata viene regolata variando il numero di giri del gruppo vite in funzione della richiesta reale. Riduce i cicli carico/vuoto, mantiene la pressione stabile, si adatta alla domanda variabile dello stabilimento.",
   },
@@ -117,7 +117,7 @@ export default function Produzione() {
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl">
               <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-5">
-                Aria compressa — produzione
+                Aria compressa · produzione
               </p>
               <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-[3.25rem] leading-tight">
                 Compressori selezionati sul profilo di carico reale
@@ -151,7 +151,7 @@ export default function Produzione() {
             <p className="text-muted-foreground leading-relaxed max-w-3xl mb-10">
               Ogni tecnologia di compressione ha un campo applicativo ottimale. La scelta dipende
               dalla portata richiesta, dalla classe di purezza dell&apos;aria, dal profilo di carico
-              e dai vincoli di installazione — non dalla disponibilità a magazzino.
+              e dai vincoli di installazione, non dalla disponibilità a magazzino.
             </p>
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
               {tipologie.map((t) => {
@@ -232,24 +232,24 @@ export default function Produzione() {
                 La classe IE5 identifica un livello di efficienza, non un&apos;unica tecnologia
                 costruttiva. Spesso è associata a motori sincroni a magneti permanenti, ma esistono
                 soluzioni IE5 a riluttanza sincrona (SynRM) che raggiungono la stessa classe senza
-                magneti permanenti — una tecnologia che combina le prestazioni dei motori a magneti
-                permanenti con la semplicità costruttiva di un motore asincrono, senza utilizzo di
-                terre rare.
+                magneti permanenti. Si tratta di una tecnologia che combina le prestazioni dei motori
+                a magneti permanenti con la semplicità costruttiva di un motore asincrono, senza
+                utilizzo di terre rare.
               </p>
               <p>
                 Il rendimento dichiarato di un motore è una fotografia a condizioni nominali. In un
-                impianto reale, il compressore lavora a carichi variabili — turni produttivi, pause,
-                picchi, consumi di fondo — e la differenza tra le classi si misura sul comportamento
+                impianto reale, il compressore lavora a carichi variabili (turni produttivi, pause,
+                picchi, consumi di fondo) e la differenza tra le classi si misura sul comportamento
                 ai regimi parziali, non solo sul rendimento di targa. Un motore IE5, abbinato a
                 inverter e regolazione della portata, contiene le perdite anche quando il compressore
-                non lavora a pieno carico — condizione in cui la macchina opera per la maggior parte
+                non lavora a pieno carico, condizione in cui la macchina opera per la maggior parte
                 delle ore annue.
               </p>
             </div>
 
             <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 items-start">
 
-              {/* Grafico recharts — client component */}
+              {/* Grafico recharts (client component) */}
               <IeMotorChart />
 
               {/* Tabella */}
@@ -286,7 +286,7 @@ export default function Produzione() {
 
             <p className="mt-10 max-w-3xl text-muted-foreground leading-relaxed">
               Il vantaggio economico non si misura in punti percentuali di rendimento nominale,
-              ma in kWh assorbiti in meno per produrre la stessa quantità di aria compressa —
+              ma in kWh assorbiti in meno per produrre la stessa quantità di aria compressa,
               soprattutto nelle ore in cui l&apos;impianto lavora a carico variabile, che in un
               servizio continuo sono la maggioranza.
             </p>
@@ -366,8 +366,8 @@ export default function Produzione() {
                   quando il problema è risolvibile con un ricambio.
                 </p>
                 <p>
-                  Per impianti che richiedono revisioni straordinarie — sostituzione
-                  rotori, revisione valvole, pulizia intercooler — gestiamo l&apos;intervento
+                  Per impianti che richiedono revisioni straordinarie (sostituzione
+                  rotori, revisione valvole, pulizia intercooler), gestiamo l&apos;intervento
                   direttamente o coordinandoci con i centri assistenza costruttore
                   in funzione del tipo di macchina e della garanzia.
                 </p>

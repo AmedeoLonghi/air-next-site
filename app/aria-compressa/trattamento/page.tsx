@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 const schema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Trattamento Aria Compressa — Filtrazione ed Essiccazione",
+  name: "Trattamento Aria Compressa: Filtrazione ed Essiccazione",
   description:
     "Fornitura e installazione di essiccatori e sistemi di filtrazione per aria compressa. Selezione in funzione della classe di purezza ISO 8573 richiesta dall'applicazione.",
   provider: {
@@ -47,13 +47,13 @@ const essiccatori = [
       "Il flusso d'aria è raffreddato fino a circa +3 °C da un circuito frigorifero integrato. A quella temperatura l'umidità condensa e viene drenata prima che l'aria torni alla temperatura ambiente. Soluzione adeguata per la maggior parte delle applicazioni industriali che non richiedono basse temperature ambientali o processi con specifiche di purezza più stringenti. Consumo elettrico limitato rispetto agli essiccatori ad adsorbimento.",
   },
   {
-    tipo: "Ad adsorbimento — rigenerazione a freddo",
+    tipo: "Ad adsorbimento, rigenerazione a freddo",
     pdp: "Punto di rugiada: da −20 °C a −70 °C (ISO 8573-1 Classi 1–3)",
     testo:
-      "Due colonne di materiale adsorbente (gel di silice, allumina attivata, setacci molecolari) alternano cicli di adsorbimento e rigenerazione. La colonna satura si rigenera utilizzando una quota dell'aria già essiccata — tipicamente il 15 % della portata trattata — che spazza l'adsorbente a pressione ridotta eliminando l'umidità desorbita. Soluzione semplice, senza sorgenti di calore esterne. Il consumo di aria per la rigenerazione aumenta il consumo energetico specifico dell'essiccatore.",
+      "Due colonne di materiale adsorbente (gel di silice, allumina attivata, setacci molecolari) alternano cicli di adsorbimento e rigenerazione. La colonna satura si rigenera utilizzando una quota dell'aria già essiccata, tipicamente il 15 % della portata trattata, che spazza l'adsorbente a pressione ridotta eliminando l'umidità desorbita. Soluzione semplice, senza sorgenti di calore esterne. Il consumo di aria per la rigenerazione aumenta il consumo energetico specifico dell'essiccatore.",
   },
   {
-    tipo: "Ad adsorbimento — rigenerazione a caldo",
+    tipo: "Ad adsorbimento, rigenerazione a caldo",
     pdp: "Punto di rugiada: da −20 °C a −70 °C (ISO 8573-1 Classi 1–3)",
     testo:
       "Il principio è lo stesso della rigenerazione a freddo, ma la colonna satura viene riscaldata esternamente (resistenza elettrica o vapore) prima dello spurgo. Il calore accelera il desorbimento e riduce drasticamente il consumo di aria compressa per la rigenerazione (tipicamente sotto il 2 % contro il 15 % del ciclo a freddo). Il ciclo è più lungo e l'impianto più complesso, ma il costo energetico della rigenerazione è trascurabile. Indicato per portate elevate in cui la perdita del 15 % di aria avrebbe un impatto economico significativo.",
@@ -87,7 +87,7 @@ const filtri = [
   },
   {
     tipo: "Sterile / particolato fine",
-    classe: "ISO 8573-1: Classe 1 particolato — per applicazioni critiche",
+    classe: "ISO 8573-1: Classe 1 particolato, per applicazioni critiche",
     testo:
       "Eliminazione di particelle submicrometriche e microorganismi. Richiesto in processi farmaceutici, medicali e alimentari dove la purezza microbiologica è un requisito di processo o di certificazione.",
   },
@@ -108,7 +108,7 @@ export default function Trattamento() {
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl">
               <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-5">
-                Aria compressa — trattamento
+                Aria compressa · trattamento
               </p>
               <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-[3.25rem] leading-tight">
                 Filtrazione ed essiccazione dimensionate sulla classe di purezza richiesta
@@ -194,7 +194,7 @@ export default function Trattamento() {
                 </p>
                 <p>
                   Il dimensionamento del trattamento si fa alla portata effettiva
-                  in pressione — non alla portata atmosferica equivalente. Un errore
+                  in pressione, non alla portata atmosferica equivalente. Un errore
                   comune è utilizzare filtri ed essiccatori dimensionati su portate
                   superiori alla reale, che lavorano così ben al di sotto del punto
                   ottimale, o il contrario: apparecchi sottodimensionati con perdite
@@ -236,8 +236,8 @@ export default function Trattamento() {
                   di funzionamento e dipendente dal livello di contaminazione
                   dell&apos;aria in ingresso. Un elemento intasato genera una perdita
                   di carico che si traduce in pressione ridotta all&apos;utenza o in
-                  pressione aumentata al compressore — in ogni caso in consumo
-                  energetico inutile.
+                  pressione aumentata al compressore: in ogni caso consumo energetico
+                  inutile.
                 </p>
                 <p>
                   La manutenzione dell&apos;essiccatore frigorifero prevede pulizia

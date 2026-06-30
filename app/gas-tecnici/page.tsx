@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 const schema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Generatori Azoto e Ossigeno On-site — Tecnologia PSA",
+  name: "Generatori Azoto e Ossigeno On-site: Tecnologia PSA",
   description:
     "Fornitura e installazione di generatori on-site di azoto e ossigeno con tecnologia PSA. Produzione autonoma di gas tecnici con purezza controllata.",
   provider: {
@@ -42,13 +42,13 @@ const schema = {
 const vantaggi = [
   {
     voce: "Continuità di fornitura",
-    bombole: "Dipendente da consegne — rischio di interruzione in caso di ritardi logistici o picchi di consumo",
+    bombole: "Dipendente da consegne, con rischio di interruzione in caso di ritardi logistici o picchi di consumo",
     generatore: "Produzione continua direttamente dall'aria compressa dell'impianto",
   },
   {
     voce: "Costo per m³",
     bombole: "Alto costo unitario, penalizzato dal costo del trasporto e dalla quota cauzione delle bombole",
-    generatore: "Costo variabile legato al consumo elettrico del compressore e del generatore — strutturalmente inferiore a volumi significativi",
+    generatore: "Costo variabile legato al consumo elettrico del compressore e del generatore, strutturalmente inferiore a volumi significativi",
   },
   {
     voce: "Gestione logistica",
@@ -163,7 +163,7 @@ export default function GasTecnici() {
                   <strong className="text-foreground">Generatori di ossigeno:</strong> processo analogo con materiale adsorbente
                   differente (zeolite tipo 5A o CMS). In questo caso è l&apos;azoto a
                   essere trattenuto e l&apos;ossigeno a passare. La purezza raggiungibile
-                  con sistemi PSA standard è tipicamente 90–95% O₂ — sufficiente
+                  con sistemi PSA standard è tipicamente 90–95% O₂, sufficiente
                   per la maggior parte delle applicazioni tecniche industriali.
                 </p>
                 <p>
@@ -216,7 +216,7 @@ export default function GasTecnici() {
         <section className="py-20 sm:py-24 bg-muted/40">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <h2 className="text-2xl font-bold tracking-tight sm:text-3xl mb-10">
-              Applicazioni — Azoto
+              Applicazioni: azoto
             </h2>
             <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
               {applicazioniAzoto.map((a) => (
@@ -236,7 +236,7 @@ export default function GasTecnici() {
         <section className="py-20 sm:py-24">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <h2 className="text-2xl font-bold tracking-tight sm:text-3xl mb-10">
-              Applicazioni — Ossigeno
+              Applicazioni: ossigeno
             </h2>
             <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
               {applicazioniOssigeno.map((a) => (
@@ -269,7 +269,7 @@ export default function GasTecnici() {
                 </p>
                 <p>
                   L&apos;impianto di aria compressa a monte deve garantire portata e
-                  pressione adeguate alle condizioni di processo del generatore PSA —
+                  pressione adeguate alle condizioni di processo del generatore PSA,
                   in genere tra 6 e 10 bar di pressione in ingresso. La qualità
                   dell&apos;aria compressa è determinante: olio e umidità degradano il
                   materiale adsorbente riducendone la resa e la vita operativa.

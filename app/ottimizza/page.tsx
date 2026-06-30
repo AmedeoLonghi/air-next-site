@@ -92,7 +92,7 @@ export default function Ottimizza() {
                 <p>
                   I quattro servizi di questa sezione partono dalla misura. Ogni analisi
                   produce un documento con dati strumentali che il cliente può usare per
-                  valutare autonomamente gli interventi opportuni — indipendentemente da
+                  valutare autonomamente gli interventi opportuni, indipendentemente da
                   chi li esegue.
                 </p>
               </div>
@@ -157,7 +157,7 @@ export default function Ottimizza() {
                 </Link>
               </div>
               <p className="mt-5 text-sm text-muted-foreground">
-                Oppure contattaci per descrivere il tuo impianto — valutiamo insieme
+                Oppure contattaci per descrivere il tuo impianto: valutiamo insieme
                 quale servizio è più utile nel tuo caso.
               </p>
             </div>

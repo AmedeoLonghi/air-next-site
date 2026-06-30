@@ -170,8 +170,8 @@ export default function RicercaPerdite() {
                   motivo di cercare.
                 </p>
                 <p>
-                  I soffi di scarico continuo — utilizzati per pulire pezzi o azionare utenze
-                  pneumatiche — consumano volumi d&apos;aria significativi e spesso possono essere
+                  I soffi di scarico continuo, utilizzati per pulire pezzi o azionare utenze
+                  pneumatiche, consumano volumi d&apos;aria significativi e spesso possono essere
                   sostituiti con soluzioni più efficienti.
                 </p>
                 <p>

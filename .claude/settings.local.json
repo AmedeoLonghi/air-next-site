@@ -20,7 +20,21 @@
       "Bash(git -C /Users/amedeolonghi/Desktop/air-next-site diff)",
       "Bash(git -C /Users/amedeolonghi/Desktop/air-next-site add CLAUDE.md app/globals.css app/layout.tsx)",
       "Bash(git -C /Users/amedeolonghi/Desktop/air-next-site commit -m ' *)",
-      "Bash(git -C /Users/amedeolonghi/Desktop/air-next-site add app/page.tsx components/layout/navbar.tsx components/sections/hero.tsx components/sections/cta.tsx components/sections/features.tsx components/sections/social-proof.tsx components/sections/case-study-preview.tsx components/sections/contact-form.tsx components/sections/macro-aree.tsx components/sections/ottimizza.tsx)"
+      "Bash(git -C /Users/amedeolonghi/Desktop/air-next-site add app/page.tsx components/layout/navbar.tsx components/sections/hero.tsx components/sections/cta.tsx components/sections/features.tsx components/sections/social-proof.tsx components/sections/case-study-preview.tsx components/sections/contact-form.tsx components/sections/macro-aree.tsx components/sections/ottimizza.tsx)",
+      "Bash(git -C /Users/amedeolonghi/Desktop/air-next-site add components/layout/footer.tsx app/page.tsx components/sections/hero.tsx components/sections/ottimizza.tsx components/sections/case-study-preview.tsx)",
+      "Bash(git -C /Users/amedeolonghi/Desktop/air-next-site add app/ottimizza/audit-energetico/page.tsx)",
+      "Bash(git -C /Users/amedeolonghi/Desktop/air-next-site add app/ottimizza/ricerca-perdite/ components/sections/hero.tsx)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(git commit *)",
+      "Bash(git *)",
+      "Bash(xargs ls)",
+      "Bash(python3 *)",
+      "Bash(pip3 install *)",
+      "Bash(npm install *)",
+      "Bash(node *)",
+      "Bash(sudo chown -R 501:20 \"/Users/amedeolonghi/.npm\")"
     ]
   }
 }

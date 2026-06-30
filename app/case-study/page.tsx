@@ -24,12 +24,12 @@ const caseStudies = [
     luogo: "Provincia di Alessandria",
     tag: "Audit energetico",
     titolo: "Impianto sovradimensionato al 96%: centrale da 44 kW sostituita con soluzione da 14 kW",
-    impianto: "2 compressori scroll da 22 kW — capacità totale 7,4 m³/min",
+    impianto: "2 compressori scroll da 22 kW (capacità totale 7,4 m³/min)",
     metriche: [
-      { label: "Portata media rilevata", value: "0,269 m³/min — 3,6% della capacità installata" },
+      { label: "Portata media rilevata", value: "0,269 m³/min (3,6% della capacità installata)" },
       { label: "Distribuzione carico", value: "43,4% del tempo sotto il 25% · 53,9% tra 25% e 50%" },
       { label: "Costo energetico annuale stimato", value: "€ 13.676" },
-      { label: "Risparmio con ottimizzazione", value: "€ 7.229/anno — riduzione 52,8%" },
+      { label: "Risparmio con ottimizzazione", value: "€ 7.229/anno (riduzione 52,8%)" },
     ],
     analisi:
       "Con una portata media di 0,269 m³/min su una capacità installata di 7,4 m³/min, i compressori lavoravano quasi esclusivamente in scarico, assorbendo energia senza produrre aria utile. La soluzione ha previsto la sostituzione della centrale con un compressore VSD da 14 kW dimensionato sul profilo di portata reale.",
@@ -39,12 +39,12 @@ const caseStudies = [
     luogo: "Provincia di Novara",
     tag: "Audit energetico",
     titolo: "Centrale monoblocco da 160 kW: risparmio di €20.280/anno con configurazione modulare",
-    impianto: "1 compressore VSD da 160 kW — produzione continua lun–sab",
+    impianto: "1 compressore VSD da 160 kW, produzione continua lun–sab",
     metriche: [
       { label: "Portata media rilevata", value: "16,5–18 m³/min · consumo domenicale residuo 6,5 m³/min" },
       { label: "Distribuzione carico", value: "49% del tempo tra 50–75% della capacità · 28% oltre il 75%" },
       { label: "Costo energetico annuale stimato", value: "€ 107.640" },
-      { label: "Risparmio con configurazione modulare", value: "€ 20.280/anno — riduzione 18,9%" },
+      { label: "Risparmio con configurazione modulare", value: "€ 20.280/anno (riduzione 18,9%)" },
     ],
     analisi:
       "Il profilo di carico mostrava un picco produttivo durante i giorni lavorativi e un consumo residuo domenicale di 6,5 m³/min (perdite di rete). La macchina da 160 kW, ottimizzata per il picco, lavorava in condizioni di scarsa efficienza durante il 49% del tempo. La configurazione modulare con una macchina base più una di supporto per i picchi ha consentito di ridurre il consumo medio senza perdere la copertura del picco.",

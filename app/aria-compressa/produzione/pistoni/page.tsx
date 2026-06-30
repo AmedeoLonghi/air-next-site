@@ -55,12 +55,12 @@ export default function Pistoni() {
       <Navbar />
       <main>
 
-        {/* ── Hero ── */}
+        {/* Hero */}
         <section className="bg-background py-20 sm:py-28 lg:py-36">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl">
               <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-5">
-                Aria compressa — produzione — pistoni
+                Aria compressa · produzione · pistoni
               </p>
               <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-[3.25rem] leading-tight">
                 Compressori a pistoni: semplicità costruttiva, applicazioni specifiche
@@ -83,7 +83,7 @@ export default function Pistoni() {
           </div>
         </section>
 
-        {/* ── Principio di funzionamento ── */}
+        {/* Principio di funzionamento */}
         <section className="py-20 sm:py-24 bg-muted/40">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl">
@@ -92,17 +92,18 @@ export default function Pistoni() {
               </h2>
               <p className="text-muted-foreground leading-relaxed">
                 Il compressore a pistoni comprime l&apos;aria tramite il movimento alternativo
-                di uno o più pistoni all&apos;interno di cilindri, esattamente come un motore
-                a combustione interna ma in funzione inversa. È la tecnologia di compressione
-                più datata e meccanicamente più semplice tra quelle volumetriche, e proprio per
-                questo resta diffusa dove servono potenze contenute, ingombri ridotti, o requisiti
-                di purezza dell&apos;aria che altre tecnologie non garantiscono in modo nativo.
+                di uno o più pistoni all&apos;interno di cilindri, lo stesso principio meccanico
+                di un motore a combustione interna, in funzione inversa. È la tecnologia di
+                compressione più datata e meccanicamente più semplice tra quelle volumetriche,
+                e proprio per questo resta diffusa dove servono potenze contenute, ingombri
+                ridotti, o requisiti di purezza dell&apos;aria che altre tecnologie non
+                garantiscono in modo nativo.
               </p>
             </div>
           </div>
         </section>
 
-        {/* ── Lubrificati vs Oil-free ── */}
+        {/* Lubrificati vs Oil-free */}
         <section className="py-20 sm:py-24">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <h2 className="text-2xl font-bold tracking-tight sm:text-3xl mb-10">
@@ -122,17 +123,16 @@ export default function Pistoni() {
                 <h3 className="font-semibold text-base">Compressori oil-free</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
                   Nei modelli oil-free, pistoni e cuscinetti utilizzano materiali autolubrificanti
-                  — spesso a base di PTFE o fibra di carbonio — che eliminano la necessità di olio
-                  nella camera di compressione. L&apos;aria prodotta è certificabile in classe 0
-                  secondo ISO 8573-1: il livello di purezza più alto previsto dallo standard, senza
-                  tracce rilevabili di olio.
+                  che eliminano la necessità di olio nella camera di compressione. L&apos;aria
+                  prodotta è certificabile in classe 0 secondo ISO 8573-1, il livello di purezza
+                  più alto previsto dallo standard, senza tracce rilevabili di olio.
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* ── Dentale e medicale ── */}
+        {/* Dentale e medicale */}
         <section className="py-20 sm:py-24 bg-muted/40">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl">
@@ -146,23 +146,22 @@ export default function Pistoni() {
                   l&apos;aria alimenta strumentazione a contatto con il paziente. In questo
                   segmento, i compressori a pistoni oil-free rappresentano la tecnologia di
                   riferimento per affidabilità, costo di esercizio contenuto e cicli di lavoro
-                  adeguati all&apos;attività ambulatoriale — semi-intensivi per piccoli studi,
+                  adeguati all&apos;attività ambulatoriale, semi-intensivi per piccoli studi,
                   continui per strutture con più postazioni operative.
                 </p>
                 <p>
-                  Le gamme dedicate a questo settore, come quelle prodotte da Gentilin — azienda
-                  italiana specializzata, riferimento storico nel comparto healthcare — offrono
-                  compressori oil-free classe 0 con essiccatore ad adsorbimento integrato, cabinet
-                  insonorizzati per il comfort acustico in ambiente clinico, e cicli di lavoro
-                  differenziati per intensità d&apos;uso: dalla singola postazione fino a strutture
-                  con più riuniti operativi contemporaneamente.
+                  Le gamme dedicate a questo settore offrono compressori oil-free classe 0 con
+                  essiccatore ad adsorbimento integrato, cabinet insonorizzati per il comfort
+                  acustico in ambiente clinico, e cicli di lavoro differenziati per intensità
+                  d&apos;uso, dalla singola postazione fino a strutture con più riuniti operativi
+                  contemporaneamente.
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* ── Processo industriale ── */}
+        {/* Processo industriale */}
         <section className="py-20 sm:py-24">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl">
@@ -173,8 +172,8 @@ export default function Pistoni() {
                 La stessa logica di purezza dell&apos;aria si applica a settori industriali con
                 requisiti normativi di processo: produzione alimentare, farmaceutica,
                 laboratoristica. Qui i compressori a pistoni oil-free in classe 0 vengono
-                dimensionati per cicli di lavoro più intensivi, spesso in configurazione S1
-                (servizio continuo) senza necessità di stop termici di raffreddamento — una
+                dimensionati per cicli di lavoro più intensivi, spesso in configurazione di
+                servizio continuo senza necessità di stop termici di raffreddamento, una
                 caratteristica che distingue le gamme di processo da quelle pensate per uso
                 ambulatoriale.
               </p>
@@ -182,7 +181,7 @@ export default function Pistoni() {
           </div>
         </section>
 
-        {/* ── Criteri di scelta ── */}
+        {/* Criteri di scelta */}
         <section className="py-20 sm:py-24 bg-muted/40">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl">
@@ -193,15 +192,15 @@ export default function Pistoni() {
                 La selezione tra lubrificato e oil-free dipende da un solo criterio: se
                 l&apos;aria compressa entra in contatto diretto o indiretto con il prodotto,
                 il paziente, o un processo sensibile alla contaminazione, l&apos;oil-free è
-                l&apos;unica opzione tecnicamente corretta. Per applicazioni generiche di officina,
-                utensileria pneumatica, o processi non critici, il lubrificato resta una soluzione
-                affidabile a costo di acquisto inferiore.
+                l&apos;unica opzione tecnicamente corretta. Per applicazioni generiche di
+                officina, utensileria pneumatica, o processi non critici, il lubrificato
+                resta una soluzione affidabile a costo di acquisto inferiore.
               </p>
             </div>
           </div>
         </section>
 
-        {/* ── CTA ── */}
+        {/* CTA */}
         <section className="py-20 sm:py-28">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="max-w-2xl">

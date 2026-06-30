@@ -6,7 +6,7 @@ import { ArrowRight, FileCheck } from "lucide-react";
 const pilastri = [
   { codice: "DM 329/2004", descrizione: "Messa in servizio e utilizzo delle attrezzature in pressione" },
   { codice: "D.Lgs. 81/2008 art. 71", descrizione: "Obblighi di verifica periodica delle attrezzature di lavoro" },
-  { codice: "D.Lgs. 26/2016 (PED)", descrizione: "Direttiva attrezzature in pressione — recepimento italiano" },
+  { codice: "D.Lgs. 26/2016 (PED)", descrizione: "Direttiva attrezzature in pressione, recepimento italiano" },
 ];
 
 export function ConformitaNormativa() {

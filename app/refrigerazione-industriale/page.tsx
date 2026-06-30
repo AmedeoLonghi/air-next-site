@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 const schema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Refrigerazione Industriale — Chiller e Sistemi di Raffreddamento",
+  name: "Refrigerazione Industriale: Chiller e Sistemi di Raffreddamento",
   description:
     "Fornitura, installazione e manutenzione di sistemi di refrigerazione industriale: chiller ad acqua e ad espansione diretta, free cooling, noleggio sistemi di raffreddamento per processi industriali.",
   provider: {
@@ -228,7 +228,7 @@ export default function RefrigerazioneIndustriale() {
               <p className="mt-4 text-muted-foreground leading-relaxed">
                 Valutiamo la situazione con un sopralluogo tecnico: carico termico
                 richiesto, condizioni di installazione, refrigerante esistente e
-                opzioni di intervento — acquisto, sostituzione o noleggio.
+                opzioni di intervento: acquisto, sostituzione o noleggio.
               </p>
               <div className="mt-8">
                 <Link

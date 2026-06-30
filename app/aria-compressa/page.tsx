@@ -123,7 +123,7 @@ export default function AriaCompressa() {
                 </p>
                 <p>
                   Il nostro approccio è inverso: si parte dai parametri operativi reali
-                  — portata, pressione, profilo orario, qualità richiesta — e si
+                  (portata, pressione, profilo orario, qualità richiesta) e si
                   seleziona la tecnologia più adatta tra costruttori diversi. Il
                   risultato è un impianto dimensionato per il fabbisogno effettivo,
                   non per il margine di sicurezza del catalogo.

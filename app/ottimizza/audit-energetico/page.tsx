@@ -64,34 +64,34 @@ const auditData = [
   {
     settore: "Componentistica industriale",
     luogo: "Provincia di Alessandria",
-    impianto: "2 compressori scroll da 22 kW — capacità totale 7,4 m³/min",
+    impianto: "2 compressori scroll da 22 kW (capacità totale 7,4 m³/min)",
     metriche: [
-      { label: "Portata media rilevata", value: "0,269 m³/min — 3,6% della capacità installata" },
+      { label: "Portata media rilevata", value: "0,269 m³/min (3,6% della capacità installata)" },
       { label: "Distribuzione carico", value: "43,4% del tempo sotto il 25% · 53,9% tra 25% e 50%" },
       { label: "Costo energetico annuale stimato", value: "€ 13.676" },
-      { label: "Risparmio con ottimizzazione", value: "€ 7.229/anno — riduzione 52,8%" },
+      { label: "Risparmio con ottimizzazione", value: "€ 7.229/anno (riduzione 52,8%)" },
     ],
   },
   {
     settore: "Automazione industriale",
     luogo: "Provincia di Novara",
-    impianto: "1 compressore VSD da 160 kW — produzione continua lun–sab",
+    impianto: "1 compressore VSD da 160 kW, produzione continua lun–sab",
     metriche: [
       { label: "Portata media rilevata", value: "16,5–18 m³/min · consumo domenicale residuo 6,5 m³/min" },
       { label: "Distribuzione carico", value: "49% del tempo tra 50–75% della capacità · 28% oltre il 75%" },
       { label: "Costo energetico annuale stimato", value: "€ 107.640" },
-      { label: "Risparmio con configurazione modulare", value: "€ 20.280/anno — riduzione 18,9%" },
+      { label: "Risparmio con configurazione modulare", value: "€ 20.280/anno (riduzione 18,9%)" },
     ],
   },
   {
     settore: "Lavorazioni meccaniche",
     luogo: "Provincia di Alessandria",
-    impianto: "1 compressore VSD da 37 kW — produzione su tre turni",
+    impianto: "1 compressore VSD da 37 kW, produzione su tre turni",
     metriche: [
       { label: "Portata media rilevata", value: "2,3–2,7 m³/min · 98,5% del tempo in carico attivo" },
       { label: "Distribuzione carico", value: "79,1% del tempo nel range 25–50% della capacità" },
       { label: "Costo energetico annuale stimato", value: "€ 35.771" },
-      { label: "Risparmio con tecnologia IE5", value: "fino a € 8.677/anno — riduzione 24,3%" },
+      { label: "Risparmio con tecnologia IE5", value: "fino a € 8.677/anno (riduzione 24,3%)" },
     ],
   },
 ];
@@ -169,7 +169,7 @@ export default function AuditEnergetico() {
                   Il sovradimensionamento della centrale rispetto al fabbisogno reale è la
                   condizione più comune. Un compressore che raggiunge rapidamente la pressione
                   di rete e resta poi in scarico per lunghi periodi assorbe energia senza
-                  produrre aria utile — una perdita che non compare su nessun indicatore di
+                  produrre aria utile: una perdita che non compare su nessun indicatore di
                   produzione ma si legge direttamente in bolletta.
                 </p>
                 <p>

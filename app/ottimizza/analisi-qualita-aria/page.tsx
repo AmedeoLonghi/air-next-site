@@ -83,7 +83,7 @@ const steps = [
     n: "01",
     titolo: "Mappatura e punti di prelievo",
     testo:
-      "Identifichiamo i punti di prelievo rappresentativi dell'aria effettivamente utilizzata nelle utenze critiche. Il campione deve riflettere la qualità dell'aria al punto d'uso — non all'uscita del compressore — dopo filtrazione, essiccazione e distribuzione in rete.",
+      "Identifichiamo i punti di prelievo rappresentativi dell'aria effettivamente utilizzata nelle utenze critiche. Il campione deve riflettere la qualità dell'aria al punto d'uso, non all'uscita del compressore, dopo filtrazione, essiccazione e distribuzione in rete.",
   },
   {
     n: "02",
@@ -118,7 +118,7 @@ const applicazioni = [
   {
     settore: "Verniciatura industriale",
     testo:
-      "L'olio in sospensione nell'aria compressa produce difetti di adesione, crateri e distacchi nella finitura verniciata. La qualifica di un processo verniciante certificato — ISO 12944, Qualicoat, GSB — richiede documentazione della qualità dell'aria in ingresso all'impianto.",
+      "L'olio in sospensione nell'aria compressa produce difetti di adesione, crateri e distacchi nella finitura verniciata. La qualifica di un processo verniciante certificato (ISO 12944, Qualicoat, GSB) richiede documentazione della qualità dell'aria in ingresso all'impianto.",
   },
 ];
 
@@ -145,8 +145,8 @@ export default function AnalisiQualitaAria() {
               <p className="mt-6 text-lg leading-8 text-muted-foreground max-w-2xl">
                 La norma ISO 8573-1 definisce classi di purezza per tre categorie di
                 contaminanti: particolato, umidità e olio. Se il tuo processo richiede
-                una classe certificata — per un audit BRC, una qualifica GMP o una
-                specifica di verniciatura — il dato deve venire dalla misura, non
+                una classe certificata, per un audit BRC, una qualifica GMP o una
+                specifica di verniciatura, il dato deve venire dalla misura, non
                 dal datasheet del filtro.
               </p>
               <div className="mt-10">
@@ -162,12 +162,12 @@ export default function AnalisiQualitaAria() {
           </div>
         </section>
 
-        {/* ── ISO 8573 — i tre contaminanti ── */}
+        {/* ISO 8573: i tre contaminanti */}
         <section className="py-20 sm:py-24 bg-muted/40">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mb-12">
               <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">
-                ISO 8573-1 — tre contaminanti, una classe per ciascuno
+                ISO 8573-1: tre contaminanti, una classe per ciascuno
               </h2>
               <p className="mt-3 text-muted-foreground max-w-2xl">
                 La qualità dell&apos;aria compressa si esprime con una notazione del tipo{" "}

@@ -53,7 +53,7 @@ export default function Contatti() {
                 <h2 className="text-lg font-semibold mb-4">Disponibilità</h2>
                 <p className="text-sm text-muted-foreground leading-relaxed">
                   Disponibile dal lunedì al venerdì su appuntamento. Per richieste
-                  urgenti — guasti, fermi impianto — contattaci direttamente per
+                  urgenti, come guasti o fermi impianto: contattaci direttamente per
                   telefono.
                 </p>
                 <dl className="mt-6 space-y-4 text-sm">
@@ -97,7 +97,7 @@ export default function Contatti() {
             {/* Mappa */}
             <div className="mt-10 rounded-xl overflow-hidden border border-border">
               <iframe
-                title="Sede Air-next — Strada Valenza 4/L Bis, Casale Monferrato"
+                title="Sede Air-next: Strada Valenza 4/L Bis, Casale Monferrato"
                 src="https://maps.google.com/maps?q=Strada+Valenza+4+Casale+Monferrato+AL+Italy&output=embed"
                 width="100%"
                 height="320"

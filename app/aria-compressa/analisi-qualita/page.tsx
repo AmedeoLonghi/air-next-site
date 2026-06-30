@@ -21,7 +21,7 @@ const effetti = [
   {
     titolo: "Contaminazione del prodotto",
     testo:
-      "In processi a contatto diretto — packaging alimentare, riempimento, soffiatura — l'olio e il particolato nell'aria compressa raggiungono il prodotto. L'effetto può essere invisibile durante la produzione e emergere in fase di controllo qualità o in seguito a contestazioni dal cliente.",
+      "In processi a contatto diretto, come packaging alimentare, riempimento e soffiatura, l'olio e il particolato nell'aria compressa raggiungono il prodotto. L'effetto può essere invisibile durante la produzione e emergere in fase di controllo qualità o in seguito a contestazioni dal cliente.",
   },
   {
     titolo: "Usura accelerata delle utenze pneumatiche",
@@ -51,7 +51,7 @@ export default function AnalisiQualita() {
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl">
               <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-5">
-                Aria compressa — qualità dell&apos;aria
+                Aria compressa · qualità dell&apos;aria
               </p>
               <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-[3.25rem] leading-tight">
                 La qualità dell&apos;aria compressa è un parametro di processo

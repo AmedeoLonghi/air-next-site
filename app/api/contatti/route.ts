@@ -33,7 +33,7 @@ export async function POST(request: Request) {
   }
 
   const subject = servizio
-    ? `Nuova richiesta — ${servizio} — ${nome} (${azienda})`
+    ? `Nuova richiesta: ${servizio} - ${nome} (${azienda})`
     : `Nuova richiesta da ${nome} (${azienda})`;
 
   const html = `

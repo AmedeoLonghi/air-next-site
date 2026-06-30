@@ -86,7 +86,7 @@ export function Footer() {
         <Separator className="my-8" />
 
         <p className="text-sm text-muted-foreground">
-          © 2025 Air-next di Longhi Amedeo — P.IVA 01765720055
+          © 2025 Air-next di Longhi Amedeo · P.IVA 01765720055
         </p>
       </div>
     </footer>

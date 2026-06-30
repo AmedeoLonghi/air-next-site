@@ -54,7 +54,7 @@ const normative = [
   },
   {
     sigla: "D.Lgs. 26/2016",
-    titolo: "Direttiva PED — marcatura CE",
+    titolo: "Direttiva PED: marcatura CE",
     testo:
       "Recepisce la Direttiva 2014/68/UE. Definisce le categorie di rischio da I a IV, i moduli di valutazione della conformità e gli obblighi di dichiarazione CE e marcatura per le attrezzature che superano le soglie previste.",
   },
@@ -77,7 +77,7 @@ const steps = [
     n: "03",
     titolo: "Piano di adeguamento",
     testo:
-      "Elaboriamo un piano con le non conformità rilevate, le azioni necessarie e le priorità in funzione del rischio. Distinguiamo gli interventi urgenti — attrezzature non denunciate o con verifiche scadute — da quelli programmabili.",
+      "Elaboriamo un piano con le non conformità rilevate, le azioni necessarie e le priorità in funzione del rischio. Distinguiamo gli interventi urgenti (attrezzature non denunciate o con verifiche scadute) da quelli programmabili.",
   },
   {
     n: "04",
@@ -167,7 +167,7 @@ export default function ConformitaNormativa() {
                   INAIL: è la situazione più comune, spesso non per negligenza ma
                   perché chi ha acquistato e installato il compressore non era a
                   conoscenza dell&apos;obbligo. Il costruttore consegna la macchina con la
-                  dichiarazione CE — la denuncia di messa in servizio è invece a carico
+                  dichiarazione CE, mentre la denuncia di messa in servizio è a carico
                   del datore di lavoro.
                 </p>
                 <p>

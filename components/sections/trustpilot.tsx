@@ -13,7 +13,7 @@ import { useEffect } from "react";
 //      MiniCarousel:      "539adbd6dec7e10e686debee"
 //    Lista completa: https://support.trustpilot.com/hc/en-us/articles/115011421468
 const BUSINESS_UNIT_ID = "TODO_inserisci_business_unit_id";
-const TEMPLATE_ID = "54ad5defc6454f065c28af8b"; // Slider — cambiare se necessario
+const TEMPLATE_ID = "54ad5defc6454f065c28af8b"; // Slider, cambiare se necessario
 const LOCALE = "it-IT";
 
 export function Trustpilot() {
@@ -43,7 +43,7 @@ export function Trustpilot() {
           </h2>
         </div>
 
-        {/* Widget Trustpilot — si autogestisce se non ci sono ancora recensioni */}
+        {/* Widget Trustpilot, si autogestisce se non ci sono ancora recensioni */}
         <div
           className="trustpilot-widget"
           data-locale={LOCALE}
