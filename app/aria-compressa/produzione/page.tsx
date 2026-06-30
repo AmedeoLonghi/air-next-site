@@ -186,6 +186,117 @@ export default function Produzione() {
           </div>
         </section>
 
+        {/* ── Motori elettrici ── */}
+        <section className="py-20 sm:py-24 bg-muted/40">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl font-bold tracking-tight sm:text-3xl mb-6">
+              Motori elettrici: classe di efficienza e comportamento reale
+            </h2>
+            <div className="max-w-3xl space-y-5 text-muted-foreground leading-relaxed mb-12">
+              <p>
+                La classe IE5 identifica il livello di efficienza del motore, non una tecnologia
+                costruttiva unica. Nella pratica applicativa dei compressori di ultima generazione,
+                soprattutto sulle macchine a velocità variabile con motore sincrono a magneti
+                permanenti (iPM), l&apos;IE5 è spesso associato a questa tecnologia, anche se esistono
+                soluzioni IE5 basate su motori a riluttanza sincrona senza magneti permanenti.
+              </p>
+              <p>
+                Il rendimento dichiarato di un motore rappresenta una fotografia a condizioni nominali
+                definite. In un impianto aria compressa reale, il compressore lavora a carichi
+                variabili — turni produttivi, pause, picchi, consumi di fondo — e la differenza tra
+                le classi non si misura solo sul rendimento di picco, ma sul comportamento ai regimi
+                parziali. Un motore IE5 iPM abbinato a inverter e regolazione della portata contiene
+                le perdite elettriche e meccaniche anche quando il compressore non lavora a pieno
+                carico, condizione in cui la macchina opera per la maggior parte delle ore annue.
+              </p>
+            </div>
+
+            {/* Grafico + Tabella */}
+            <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 items-start">
+
+              {/* Grafico a barre */}
+              <div className="rounded-xl border border-border bg-background p-6">
+                <p className="text-xs font-semibold text-muted-foreground uppercase tracking-widest mb-6">
+                  Perdite energetiche residue (IE3 = 100)
+                </p>
+                <div className="space-y-5">
+                  {/* IE3 */}
+                  <div>
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-sm font-medium text-foreground">IE3</span>
+                      <span className="text-sm tabular-nums text-muted-foreground">100</span>
+                    </div>
+                    <div className="h-8 w-full rounded bg-muted overflow-hidden">
+                      <div className="h-full rounded bg-foreground/20" style={{ width: "100%" }} />
+                    </div>
+                  </div>
+                  {/* IE4 */}
+                  <div>
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-sm font-medium text-foreground">IE4</span>
+                      <span className="text-sm tabular-nums text-muted-foreground">~77</span>
+                    </div>
+                    <div className="h-8 w-full rounded bg-muted overflow-hidden">
+                      <div className="h-full rounded bg-primary/40" style={{ width: "77%" }} />
+                    </div>
+                  </div>
+                  {/* IE5 */}
+                  <div>
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-sm font-medium text-foreground">IE5</span>
+                      <span className="text-sm tabular-nums text-muted-foreground">~60</span>
+                    </div>
+                    <div className="h-8 w-full rounded bg-muted overflow-hidden">
+                      <div className="h-full rounded bg-primary" style={{ width: "60%" }} />
+                    </div>
+                  </div>
+                </div>
+                <p className="mt-4 text-xs text-muted-foreground italic">
+                  Valori indicativi a scopo illustrativo del principio di riduzione delle perdite tra classi.
+                </p>
+              </div>
+
+              {/* Tabella */}
+              <div className="rounded-xl border border-border bg-background overflow-hidden">
+                <table className="w-full text-sm">
+                  <thead>
+                    <tr className="border-b border-border bg-muted/40">
+                      <th className="text-left px-4 py-3 font-semibold text-foreground w-16">Classe</th>
+                      <th className="text-left px-4 py-3 font-semibold text-foreground">Tecnologia tipica</th>
+                      <th className="text-left px-4 py-3 font-semibold text-foreground">Impatto pratico</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-border">
+                    <tr>
+                      <td className="px-4 py-4 font-medium text-foreground align-top">IE3</td>
+                      <td className="px-4 py-4 text-muted-foreground align-top">Motore asincrono tradizionale</td>
+                      <td className="px-4 py-4 text-muted-foreground align-top">Base efficiente, perdite più elevate ai carichi parziali</td>
+                    </tr>
+                    <tr>
+                      <td className="px-4 py-4 font-medium text-foreground align-top">IE4</td>
+                      <td className="px-4 py-4 text-muted-foreground align-top">Motore asincrono o sincrono ottimizzato</td>
+                      <td className="px-4 py-4 text-muted-foreground align-top">Rendimento migliorato, perdite ridotte rispetto a IE3</td>
+                    </tr>
+                    <tr>
+                      <td className="px-4 py-4 font-medium text-primary align-top">IE5</td>
+                      <td className="px-4 py-4 text-muted-foreground align-top">Sincrono a magneti permanenti (iPM) o riluttanza sincrona</td>
+                      <td className="px-4 py-4 text-muted-foreground align-top">Perdite minime, comportamento ottimale ai carichi parziali se abbinato a inverter</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+            </div>
+
+            <p className="mt-10 max-w-3xl text-muted-foreground leading-relaxed">
+              Il vantaggio economico non si misura in punti percentuali di rendimento del motore,
+              ma in kWh assorbiti in meno per produrre la stessa quantità di aria compressa,
+              soprattutto nelle ore in cui l&apos;impianto lavora a carico variabile — che in un
+              servizio continuo sono la maggioranza.
+            </p>
+          </div>
+        </section>
+
         {/* ── Come selezioniamo ── */}
         <section className="py-20 sm:py-24 bg-muted/40">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
