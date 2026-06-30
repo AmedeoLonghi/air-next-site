@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { Zap, Search, FileCheck, Microscope, ArrowRight } from "lucide-react";
+import { Zap, Search, Microscope, ArrowRight } from "lucide-react";
 
 const servizi = [
   {
@@ -10,7 +10,6 @@ const servizi = [
     descrizione:
       "Misurazione dei consumi reali del compressore, analisi del profilo di carico e calcolo del risparmio ottenibile con intervento documentato.",
     href: "/ottimizza/audit-energetico",
-    priorita: true,
   },
   {
     icon: Search,
@@ -18,15 +17,6 @@ const servizi = [
     descrizione:
       "Rilevamento con ultrasuoni delle perdite nella rete di distribuzione. Quantificazione in kWh e stima del costo annuo degli sprechi.",
     href: "/ottimizza/ricerca-perdite",
-    priorita: true,
-  },
-  {
-    icon: FileCheck,
-    titolo: "Conformità Normativa",
-    descrizione:
-      "Verifica della conformità delle attrezzature in pressione agli adempimenti previsti dalla normativa italiana vigente.",
-    href: "/ottimizza/conformita-normativa",
-    priorita: false,
   },
   {
     icon: Microscope,
@@ -34,7 +24,6 @@ const servizi = [
     descrizione:
       "Analisi della qualità dell'aria compressa secondo ISO 8573 per processi che richiedono classi di purezza certificate.",
     href: "/ottimizza/analisi-qualita-aria",
-    priorita: false,
   },
 ];
 
@@ -47,12 +36,12 @@ export function Ottimizza() {
             Se il tuo impianto consuma più del necessario, partiamo da qui.
           </h2>
           <p className="mt-4 text-muted-foreground">
-            Prima di qualsiasi proposta commerciale, misuriamo. Quattro servizi di analisi
+            Prima di qualsiasi proposta commerciale, misuriamo. Tre servizi di analisi
             che restituiscono dati oggettivi e un piano di intervento giustificato dai numeri.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
           {servizi.map((s) => {
             const Icon = s.icon;
             return (
