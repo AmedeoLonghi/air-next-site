@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
+import { IeMotorChart } from "@/components/sections/ie-motor-chart";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { ArrowRight } from "lucide-react";
@@ -178,6 +179,78 @@ export default function Produzione() {
             </div>
             <p className="mt-10 text-muted-foreground leading-relaxed max-w-3xl">
               {regolazioneChiusura}
+            </p>
+          </div>
+        </section>
+
+        {/* ── Motori elettrici ── */}
+        <section className="py-20 sm:py-24 bg-muted/40">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl font-bold tracking-tight sm:text-3xl mb-8">
+              Motore elettrico: la classe di efficienza non è solo una sigla
+            </h2>
+            <div className="max-w-3xl space-y-5 text-muted-foreground leading-relaxed mb-12">
+              <p>
+                La classe IE5 identifica un livello di efficienza, non un&apos;unica tecnologia
+                costruttiva. Spesso è associata a motori sincroni a magneti permanenti, ma esistono
+                soluzioni IE5 a riluttanza sincrona (SynRM) che raggiungono la stessa classe senza
+                magneti permanenti — una tecnologia che combina le prestazioni dei motori a magneti
+                permanenti con la semplicità costruttiva di un motore asincrono, senza utilizzo di
+                terre rare.
+              </p>
+              <p>
+                Il rendimento dichiarato di un motore è una fotografia a condizioni nominali. In un
+                impianto reale, il compressore lavora a carichi variabili — turni produttivi, pause,
+                picchi, consumi di fondo — e la differenza tra le classi si misura sul comportamento
+                ai regimi parziali, non solo sul rendimento di targa. Un motore IE5, abbinato a
+                inverter e regolazione della portata, contiene le perdite anche quando il compressore
+                non lavora a pieno carico — condizione in cui la macchina opera per la maggior parte
+                delle ore annue.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 items-start">
+
+              {/* Grafico recharts — client component */}
+              <IeMotorChart />
+
+              {/* Tabella */}
+              <div className="rounded-xl border border-border bg-background overflow-hidden">
+                <table className="w-full text-sm">
+                  <thead>
+                    <tr className="border-b border-border bg-muted/40">
+                      <th className="text-left px-4 py-3 font-semibold text-foreground w-16">Classe</th>
+                      <th className="text-left px-4 py-3 font-semibold text-foreground">Tecnologia tipica</th>
+                      <th className="text-left px-4 py-3 font-semibold text-foreground">Comportamento pratico</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-border">
+                    <tr>
+                      <td className="px-4 py-4 font-medium text-foreground align-top">IE3</td>
+                      <td className="px-4 py-4 text-muted-foreground align-top">Motore asincrono induttivo</td>
+                      <td className="px-4 py-4 text-muted-foreground align-top">Efficiente rispetto alle generazioni precedenti, perdite più marcate ai carichi parziali</td>
+                    </tr>
+                    <tr>
+                      <td className="px-4 py-4 font-medium text-foreground align-top">IE4</td>
+                      <td className="px-4 py-4 text-muted-foreground align-top">Motore asincrono o sincrono ottimizzato</td>
+                      <td className="px-4 py-4 text-muted-foreground align-top">Rendimento migliorato, perdite ridotte rispetto a IE3</td>
+                    </tr>
+                    <tr>
+                      <td className="px-4 py-4 font-medium text-primary align-top">IE5</td>
+                      <td className="px-4 py-4 text-muted-foreground align-top">Sincrono a magneti permanenti (iPM) o a riluttanza sincrona (SynRM)</td>
+                      <td className="px-4 py-4 text-muted-foreground align-top">Perdite minime, comportamento ottimale ai carichi parziali se abbinato a inverter</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+            </div>
+
+            <p className="mt-10 max-w-3xl text-muted-foreground leading-relaxed">
+              Il vantaggio economico non si misura in punti percentuali di rendimento nominale,
+              ma in kWh assorbiti in meno per produrre la stessa quantità di aria compressa —
+              soprattutto nelle ore in cui l&apos;impianto lavora a carico variabile, che in un
+              servizio continuo sono la maggioranza.
             </p>
           </div>
         </section>
