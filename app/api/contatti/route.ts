@@ -4,7 +4,9 @@ import { NextResponse } from "next/server";
 // TODO: dopo la verifica del dominio air-next.it in Resend, cambiare in:
 // const FROM = "Air-next <noreply@air-next.it>";
 const FROM = "Air-next <onboarding@resend.dev>";
-const TO = "info@air-next.it";
+// TODO: dopo la verifica del dominio air-next.it in Resend, cambiare in:
+// const TO = "info@air-next.it";
+const TO = "amministrazione@air-next.it";
 
 export async function POST(request: Request) {
   // Istanziato qui (non a module-level) per non bloccare la build con chiave vuota
