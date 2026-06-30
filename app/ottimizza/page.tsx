@@ -22,9 +22,8 @@ const servizi = [
     icon: Zap,
     titolo: "Audit Energetico",
     descrizione:
-      "Monitoraggio strumentale dei consumi reali: data logger sulla linea principale per 7 giorni consecutivi. Il profilo di carico, il costo energetico annuale e gli scenari di ottimizzazione emergono dai dati, non dalle stime.",
+      "Monitoraggio strumentale dei consumi reali con strumentazione dedicata. La durata varia in base al processo produttivo: tipicamente una settimana, ma può estendersi fino a 45 giorni per cicli con variabilità stagionale. Il profilo di carico, il costo energetico annuale e gli scenari di ottimizzazione emergono dai dati, non dalle stime.",
     href: "/ottimizza/audit-energetico",
-    priorita: true,
   },
   {
     icon: Search,
@@ -32,7 +31,6 @@ const servizi = [
     descrizione:
       "Rilevamento con ultrasuoni di ogni punto di dispersione sulla rete di distribuzione. Ogni perdita identificata è classificata per entità e convertita in kWh e costo annuale al prezzo dell'energia del cliente.",
     href: "/ottimizza/ricerca-perdite",
-    priorita: true,
   },
   {
     icon: FileCheck,
@@ -40,7 +38,6 @@ const servizi = [
     descrizione:
       "Censimento delle attrezzature in pressione, verifica della documentazione esistente e piano di adeguamento a DM 329/2004, D.Lgs. 81/2008 e Direttiva PED. Supporto operativo per denuncia INAIL e verifiche periodiche.",
     href: "/ottimizza/conformita-normativa",
-    priorita: false,
   },
   {
     icon: Microscope,
@@ -48,7 +45,6 @@ const servizi = [
     descrizione:
       "Campionamento in linea e analisi in laboratorio secondo ISO 8573-1. Il report certifica la classe di purezza rilevata per particolato, umidità e olio. Indispensabile per processi farmaceutici, alimentari ed elettronici.",
     href: "/ottimizza/analisi-qualita-aria",
-    priorita: false,
   },
 ];
 
@@ -117,12 +113,7 @@ export default function Ottimizza() {
                   <Link
                     key={s.titolo}
                     href={s.href}
-                    className={cn(
-                      "group flex gap-4 rounded-xl border p-6 transition-colors hover:bg-muted/60",
-                      s.priorita
-                        ? "border-primary/30 bg-primary/5"
-                        : "border-border bg-background"
-                    )}
+                    className="group flex gap-4 rounded-xl border border-border bg-background p-6 transition-colors hover:bg-muted/60"
                   >
                     <div className="mt-0.5 shrink-0 inline-flex h-9 w-9 items-center justify-center rounded-lg bg-primary/10">
                       <Icon className="h-5 w-5 text-primary" />
