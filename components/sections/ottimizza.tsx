@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { Zap, Search, Microscope, ArrowRight } from "lucide-react";
+import { Zap, Search, ArrowRight } from "lucide-react";
 
 const servizi = [
   {
@@ -18,13 +18,6 @@ const servizi = [
       "Rilevamento con ultrasuoni delle perdite nella rete di distribuzione. Quantificazione in kWh e stima del costo annuo degli sprechi.",
     href: "/ottimizza/ricerca-perdite",
   },
-  {
-    icon: Microscope,
-    titolo: "Analisi Qualità Aria",
-    descrizione:
-      "Analisi della qualità dell'aria compressa secondo ISO 8573 per processi che richiedono classi di purezza certificate.",
-    href: "/ottimizza/analisi-qualita-aria",
-  },
 ];
 
 export function Ottimizza() {
@@ -36,12 +29,12 @@ export function Ottimizza() {
             Se il tuo impianto consuma più del necessario, partiamo da qui.
           </h2>
           <p className="mt-4 text-muted-foreground">
-            Prima di qualsiasi proposta commerciale, misuriamo. Tre servizi di analisi
+            Prima di qualsiasi proposta commerciale, misuriamo. Due servizi di analisi
             che restituiscono dati oggettivi e un piano di intervento giustificato dai numeri.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
           {servizi.map((s) => {
             const Icon = s.icon;
             return (
