@@ -10,7 +10,7 @@ const navLinks = [
   { label: "Aria Compressa", href: "/aria-compressa" },
   { label: "Refrigerazione", href: "/refrigerazione-industriale" },
   { label: "Gas Tecnici", href: "/gas-tecnici" },
-  { label: "Ottimizza", href: "/ottimizza" },
+  { label: "Analisi e Diagnosi", href: "/ottimizza" },
   { label: "Casi Studio", href: "/case-study" },
 ];
 

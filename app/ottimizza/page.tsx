@@ -7,11 +7,11 @@ import { cn } from "@/lib/utils";
 import { Zap, Search, FileCheck, Microscope, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Ottimizza il tuo impianto aria compressa | Air-next",
+  title: "Analisi e Diagnosi impianti aria compressa | Air-next",
   description:
     "Quattro servizi di analisi strumentale per impianti aria compressa: audit energetico, ricerca perdite, conformità normativa, analisi qualità aria.",
   openGraph: {
-    title: "Ottimizza il tuo impianto aria compressa | Air-next",
+    title: "Analisi e Diagnosi impianti aria compressa | Air-next",
     description:
       "Quattro servizi di analisi strumentale per impianti aria compressa: audit energetico, ricerca perdite, conformità normativa, analisi qualità aria.",
   },
@@ -63,7 +63,7 @@ export default function Ottimizza() {
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl">
               <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-5">
-                Ottimizza il tuo impianto
+                Analisi e Diagnosi
               </p>
               <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-[3.25rem] leading-tight">
                 Prima misuriamo. Poi valutiamo.

@@ -49,7 +49,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold mb-4">Ottimizza</h3>
+            <h3 className="text-sm font-semibold mb-4">Analisi e Diagnosi</h3>
             <ul className="space-y-3">
               {ottimizza.map((link) => (
                 <li key={link.href}>
