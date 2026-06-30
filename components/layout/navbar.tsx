@@ -22,7 +22,7 @@ export function Navbar() {
       <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link href="/">
           <div className="px-1">
-            <img src="/logo.svg" alt="Air-next" width="62" height="22" className="h-[22px] w-auto" />
+            <img src="/logo.svg" alt="Air-next" width="84" height="30" className="h-[30px] w-auto" />
           </div>
         </Link>
 

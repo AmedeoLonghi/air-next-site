@@ -23,7 +23,7 @@ export function Footer() {
           <div className="col-span-2 md:col-span-1">
             <Link href="/" className="mb-4 inline-block">
               <div className="px-1">
-                <img src="/logo.svg" alt="Air-next" width="50" height="18" className="h-[18px] w-auto" />
+                <img src="/logo.svg" alt="Air-next" width="67" height="24" className="h-6 w-auto" />
               </div>
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed max-w-xs">
