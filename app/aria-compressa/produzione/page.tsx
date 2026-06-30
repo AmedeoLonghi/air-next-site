@@ -47,20 +47,31 @@ const tipologie = [
     sottotitolo: "rotary screw",
     testo:
       "Due rotori a profilo elicoidale riducono progressivamente il volume dell'aria, comprimendola. La tecnologia più diffusa in ambito industriale per continuità di servizio e ampia disponibilità di taglie. Disponibili con iniezione d'olio e a secco. I lubrificati richiedono separazione olio/aria a valle; i modelli a secco sono indicati per processi sensibili alla contaminazione.",
+    href: null,
   },
   {
     n: "02",
+    nome: "A pistoni",
+    sottotitolo: "reciprocating",
+    testo:
+      "Tecnologia volumetrica a movimento alternativo, disponibile in versione lubrificata e oil-free. I modelli oil-free producono aria certificabile in classe 0 ISO 8573-1 senza trattamento olio a valle. Applicazioni tipiche: dentale, medicale, farmaceutico, alimentare e ovunque la contaminazione oleosa non sia ammessa.",
+    href: "/aria-compressa/produzione/pistoni",
+  },
+  {
+    n: "03",
     nome: "Scroll",
     sottotitolo: "spirale eccentrica",
     testo:
       "Due spirali eccentriche — una fissa, una orbitante — comprimono l'aria per riduzione progressiva del volume delle camere. Oil-free per costruzione, silenzioso, adatto a taglie ridotte. Applicazioni tipiche: laboratori, medicale, processi con requisiti di purezza che escludono la gestione del circuito olio.",
+    href: null,
   },
   {
-    n: "03",
+    n: "04",
     nome: "Centrifugo",
     sottotitolo: "turbocompressore",
     testo:
       "La compressione avviene per effetto centrifugo tramite giranti ad alta velocità. Oil-free per definizione, indicato per portate elevate con pressioni moderate. Non è una tecnologia comune nel manifatturiero di media taglia: si trova in impianti di grande dimensione dove le portate richieste superano le capacità delle macchine volumetriche.",
+    href: null,
   },
 ];
 
@@ -134,25 +145,52 @@ export default function Produzione() {
         {/* ── Tipologie ── */}
         <section className="py-20 sm:py-24 bg-muted/40">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <h2 className="text-2xl font-bold tracking-tight sm:text-3xl mb-10">
+            <h2 className="text-2xl font-bold tracking-tight sm:text-3xl mb-4">
               Tipologie di compressori
             </h2>
-            <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
-              {tipologie.map((t) => (
-                <div
-                  key={t.nome}
-                  className="rounded-xl border border-border bg-card p-6 flex flex-col gap-3"
-                >
-                  <div className="text-4xl font-bold text-primary/15 tabular-nums leading-none mb-1">
-                    {t.n}
+            <p className="text-muted-foreground leading-relaxed max-w-3xl mb-10">
+              Ogni tecnologia di compressione ha un campo applicativo ottimale. La scelta dipende
+              dalla portata richiesta, dalla classe di purezza dell&apos;aria, dal profilo di carico
+              e dai vincoli di installazione — non dalla disponibilità a magazzino.
+            </p>
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+              {tipologie.map((t) => {
+                const inner = (
+                  <>
+                    <div className="text-4xl font-bold text-primary/15 tabular-nums leading-none mb-1">
+                      {t.n}
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-base">{t.nome}</h3>
+                      <p className="text-xs text-muted-foreground mt-0.5 uppercase tracking-wide">{t.sottotitolo}</p>
+                    </div>
+                    <p className="text-sm text-muted-foreground leading-relaxed flex-1">{t.testo}</p>
+                    {t.href && (
+                      <div className="flex items-center gap-1 text-sm font-medium text-primary mt-1">
+                        Approfondisci
+                        <ArrowRight size={14} />
+                      </div>
+                    )}
+                  </>
+                );
+
+                return t.href ? (
+                  <Link
+                    key={t.nome}
+                    href={t.href}
+                    className="rounded-xl border border-border bg-card p-6 flex flex-col gap-3 transition-colors hover:bg-muted/60"
+                  >
+                    {inner}
+                  </Link>
+                ) : (
+                  <div
+                    key={t.nome}
+                    className="rounded-xl border border-border bg-card p-6 flex flex-col gap-3"
+                  >
+                    {inner}
                   </div>
-                  <div>
-                    <h3 className="font-semibold text-base">{t.nome}</h3>
-                    <p className="text-xs text-muted-foreground mt-0.5 uppercase tracking-wide">{t.sottotitolo}</p>
-                  </div>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{t.testo}</p>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </section>
