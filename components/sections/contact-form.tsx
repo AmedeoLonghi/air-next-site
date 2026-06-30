@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import { Loader2 } from "lucide-react";
 
 const servizi = [
   "Audit Energetico",
@@ -19,11 +20,44 @@ const inputClass =
 
 export function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    // CRM integration — provider da definire
-    setSubmitted(true);
+    setError(null);
+    setLoading(true);
+
+    const form = e.currentTarget;
+    const data = {
+      nome: (form.elements.namedItem("nome") as HTMLInputElement).value,
+      azienda: (form.elements.namedItem("azienda") as HTMLInputElement).value,
+      email: (form.elements.namedItem("email") as HTMLInputElement).value,
+      telefono: (form.elements.namedItem("telefono") as HTMLInputElement).value,
+      servizio: (form.elements.namedItem("servizio") as HTMLSelectElement).value,
+      messaggio: (form.elements.namedItem("messaggio") as HTMLTextAreaElement).value,
+    };
+
+    try {
+      const res = await fetch("/api/contatti", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      const json = await res.json();
+
+      if (!res.ok) {
+        setError(json.error ?? "Errore durante l'invio. Riprova.");
+        return;
+      }
+
+      setSubmitted(true);
+    } catch {
+      setError("Errore di rete. Controlla la connessione e riprova.");
+    } finally {
+      setLoading(false);
+    }
   }
 
   return (
@@ -72,7 +106,7 @@ export function ContactForm() {
                 </p>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-4">
+              <form onSubmit={handleSubmit} className="space-y-4" noValidate>
                 <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                   <div>
                     <label className="block text-sm font-medium mb-1.5" htmlFor="nome">
@@ -123,8 +157,22 @@ export function ContactForm() {
                     className={`${inputClass} resize-none`}
                   />
                 </div>
-                <Button type="submit" size="lg" className="w-full sm:w-auto">
-                  Invia richiesta
+
+                {error && (
+                  <p className="rounded-lg border border-destructive/30 bg-destructive/5 px-4 py-3 text-sm text-destructive">
+                    {error}
+                  </p>
+                )}
+
+                <Button type="submit" size="lg" className="w-full sm:w-auto" disabled={loading}>
+                  {loading ? (
+                    <>
+                      <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                      Invio in corso…
+                    </>
+                  ) : (
+                    "Invia richiesta"
+                  )}
                 </Button>
               </form>
             )}
