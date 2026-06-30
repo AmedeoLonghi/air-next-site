@@ -63,35 +63,32 @@ const tipologie = [
   },
 ];
 
-const regolazioni = [
+const regolazioneIntro = `Soft starter e regolazione della portata sono due cose diverse. Il primo riguarda l’avviamento del motore — riduce la corrente di spunto e rende più dolce la partenza elettrica. Una volta avviato, il compressore lavora secondo la propria logica di regolazione, indipendentemente dal tipo di avviamento installato.`;
+
+const modalitaRegolazione = [
   {
-    n: "01",
-    nome: "ON/OFF",
-    varianti: [
-      {
-        label: "Senza soft start",
-        testo:
-          "Il compressore si avvia direttamente al raggiungimento della soglia minima di pressione e si arresta al raggiungimento della massima. La corrente di spunto all'avvio è elevata. Adatto a profili di carico molto stabili con cicli di avvio/arresto poco frequenti.",
-      },
-      {
-        label: "Con soft start",
-        testo:
-          "La rampa di avvio è controllata elettronicamente per limitare la corrente di spunto. Riduce lo stress meccanico ed elettrico ai transitori, consentendo cicli di accensione/spegnimento più frequenti rispetto all'avvio diretto. Il comportamento in regime è identico all'ON/OFF tradizionale.",
-      },
-    ],
+    titolo: "ON/OFF",
+    testo:
+      "Il compressore parte quando la pressione scende sotto un valore minimo, si ferma al valore massimo. Regolazione semplice, adatta a piccole potenze e consumi discontinui con avviamenti orari contenuti. Su potenze più elevate o con richiesta frequente, i continui avvii e arresti stressano motore, contattori e gruppo vite.",
   },
   {
-    n: "02",
-    nome: "VSD — variazione di velocità con inverter",
-    varianti: [
-      {
-        label: "Modulazione continua",
-        testo:
-          "Un inverter di frequenza adatta la velocità in tempo reale al fabbisogno della rete. La portata segue la domanda con continuità, mantenendo la pressione stabile entro una banda stretta senza cicli di avvio/arresto. Tecnologia efficace per profili di carico variabili: il risparmio energetico è significativo rispetto all'ON/OFF quando il carico medio è inferiore al 70–80% della portata nominale.",
-      },
-    ],
+    titolo: "Carico/vuoto (load/unload)",
+    testo:
+      "Il sistema più diffuso sui compressori a vite tradizionali. Il motore resta acceso; quando la pressione raggiunge il valore massimo, la valvola di aspirazione chiude e il compressore smette di produrre aria ma continua ad assorbire energia — indicativamente tra il 20% e il 35% della potenza nominale a vuoto, a seconda della macchina. Logica robusta, ma penalizzante dal punto di vista energetico se la macchina passa molto tempo a vuoto.",
+  },
+  {
+    titolo: "Modulante",
+    testo:
+      "La valvola di aspirazione viene parzializzata per ridurre la portata. Riduce la portata prodotta, ma l'assorbimento elettrico non cala in proporzione — utile in condizioni specifiche, da non confondere con l'efficienza reale di un inverter ben dimensionato.",
+  },
+  {
+    titolo: "VSD — velocità variabile",
+    testo:
+      "La portata viene regolata variando il numero di giri del gruppo vite in funzione della richiesta reale. Riduce i cicli carico/vuoto, mantiene la pressione stabile, si adatta alla domanda variabile dello stabilimento.",
   },
 ];
+
+const regolazioneChiusura = `Su impianti con più compressori, il salto di qualità spesso non sta nella singola macchina, ma nel farli lavorare correttamente insieme: regolazione a scorrimento, controllo master/slave, sequenziatori di centrale evitano che una macchina grande lavori male per coprire consumi bassi o variabili. Il dato che permette di scegliere la logica corretta è sempre il profilo reale di consumo: senza quello, anche una macchina corretta sulla carta rischia di non essere ottimizzata sul campo.`;
 
 export default function Produzione() {
   return (
@@ -162,137 +159,25 @@ export default function Produzione() {
         {/* ── Tecnologie di regolazione ── */}
         <section className="py-20 sm:py-24">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <h2 className="text-2xl font-bold tracking-tight sm:text-3xl mb-14">
+            <h2 className="text-2xl font-bold tracking-tight sm:text-3xl mb-8">
               Tecnologie di regolazione
             </h2>
-            <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
-              {regolazioni.map((r) => (
-                <div key={r.n}>
-                  <div className="text-5xl font-bold text-primary/15 mb-4 tabular-nums">
-                    {r.n}
-                  </div>
-                  <h3 className="font-semibold text-lg mb-5">{r.nome}</h3>
-                  <div className="space-y-5">
-                    {r.varianti.map((v) => (
-                      <div key={v.label} className="pl-4 border-l-2 border-border">
-                        <p className="text-sm font-medium text-foreground mb-1">{v.label}</p>
-                        <p className="text-sm text-muted-foreground leading-relaxed">{v.testo}</p>
-                      </div>
-                    ))}
-                  </div>
+            <p className="text-muted-foreground leading-relaxed max-w-3xl mb-12">
+              {regolazioneIntro}
+            </p>
+            <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+              {modalitaRegolazione.map((m) => (
+                <div
+                  key={m.titolo}
+                  className="rounded-xl border border-border bg-card p-6 flex flex-col gap-3"
+                >
+                  <h3 className="font-semibold text-base">{m.titolo}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{m.testo}</p>
                 </div>
               ))}
             </div>
-          </div>
-        </section>
-
-        {/* ── Motori elettrici ── */}
-        <section className="py-20 sm:py-24 bg-muted/40">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <h2 className="text-2xl font-bold tracking-tight sm:text-3xl mb-6">
-              Motori elettrici: classe di efficienza e comportamento reale
-            </h2>
-            <div className="max-w-3xl space-y-5 text-muted-foreground leading-relaxed mb-12">
-              <p>
-                La classe IE5 identifica il livello di efficienza del motore, non una tecnologia
-                costruttiva unica. Nella pratica applicativa dei compressori di ultima generazione,
-                soprattutto sulle macchine a velocità variabile con motore sincrono a magneti
-                permanenti (iPM), l&apos;IE5 è spesso associato a questa tecnologia, anche se esistono
-                soluzioni IE5 basate su motori a riluttanza sincrona senza magneti permanenti.
-              </p>
-              <p>
-                Il rendimento dichiarato di un motore rappresenta una fotografia a condizioni nominali
-                definite. In un impianto aria compressa reale, il compressore lavora a carichi
-                variabili — turni produttivi, pause, picchi, consumi di fondo — e la differenza tra
-                le classi non si misura solo sul rendimento di picco, ma sul comportamento ai regimi
-                parziali. Un motore IE5 iPM abbinato a inverter e regolazione della portata contiene
-                le perdite elettriche e meccaniche anche quando il compressore non lavora a pieno
-                carico, condizione in cui la macchina opera per la maggior parte delle ore annue.
-              </p>
-            </div>
-
-            {/* Grafico + Tabella */}
-            <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 items-start">
-
-              {/* Grafico a barre */}
-              <div className="rounded-xl border border-border bg-background p-6">
-                <p className="text-xs font-semibold text-muted-foreground uppercase tracking-widest mb-6">
-                  Perdite energetiche residue (IE3 = 100)
-                </p>
-                <div className="space-y-5">
-                  {/* IE3 */}
-                  <div>
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-sm font-medium text-foreground">IE3</span>
-                      <span className="text-sm tabular-nums text-muted-foreground">100</span>
-                    </div>
-                    <div className="h-8 w-full rounded bg-muted overflow-hidden">
-                      <div className="h-full rounded bg-foreground/20" style={{ width: "100%" }} />
-                    </div>
-                  </div>
-                  {/* IE4 */}
-                  <div>
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-sm font-medium text-foreground">IE4</span>
-                      <span className="text-sm tabular-nums text-muted-foreground">~77</span>
-                    </div>
-                    <div className="h-8 w-full rounded bg-muted overflow-hidden">
-                      <div className="h-full rounded bg-primary/40" style={{ width: "77%" }} />
-                    </div>
-                  </div>
-                  {/* IE5 */}
-                  <div>
-                    <div className="flex items-center justify-between mb-2">
-                      <span className="text-sm font-medium text-foreground">IE5</span>
-                      <span className="text-sm tabular-nums text-muted-foreground">~60</span>
-                    </div>
-                    <div className="h-8 w-full rounded bg-muted overflow-hidden">
-                      <div className="h-full rounded bg-primary" style={{ width: "60%" }} />
-                    </div>
-                  </div>
-                </div>
-                <p className="mt-4 text-xs text-muted-foreground italic">
-                  Valori indicativi a scopo illustrativo del principio di riduzione delle perdite tra classi.
-                </p>
-              </div>
-
-              {/* Tabella */}
-              <div className="rounded-xl border border-border bg-background overflow-hidden">
-                <table className="w-full text-sm">
-                  <thead>
-                    <tr className="border-b border-border bg-muted/40">
-                      <th className="text-left px-4 py-3 font-semibold text-foreground w-16">Classe</th>
-                      <th className="text-left px-4 py-3 font-semibold text-foreground">Tecnologia tipica</th>
-                      <th className="text-left px-4 py-3 font-semibold text-foreground">Impatto pratico</th>
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-border">
-                    <tr>
-                      <td className="px-4 py-4 font-medium text-foreground align-top">IE3</td>
-                      <td className="px-4 py-4 text-muted-foreground align-top">Motore asincrono tradizionale</td>
-                      <td className="px-4 py-4 text-muted-foreground align-top">Base efficiente, perdite più elevate ai carichi parziali</td>
-                    </tr>
-                    <tr>
-                      <td className="px-4 py-4 font-medium text-foreground align-top">IE4</td>
-                      <td className="px-4 py-4 text-muted-foreground align-top">Motore asincrono o sincrono ottimizzato</td>
-                      <td className="px-4 py-4 text-muted-foreground align-top">Rendimento migliorato, perdite ridotte rispetto a IE3</td>
-                    </tr>
-                    <tr>
-                      <td className="px-4 py-4 font-medium text-primary align-top">IE5</td>
-                      <td className="px-4 py-4 text-muted-foreground align-top">Sincrono a magneti permanenti (iPM) o riluttanza sincrona</td>
-                      <td className="px-4 py-4 text-muted-foreground align-top">Perdite minime, comportamento ottimale ai carichi parziali se abbinato a inverter</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-
-            </div>
-
-            <p className="mt-10 max-w-3xl text-muted-foreground leading-relaxed">
-              Il vantaggio economico non si misura in punti percentuali di rendimento del motore,
-              ma in kWh assorbiti in meno per produrre la stessa quantità di aria compressa,
-              soprattutto nelle ore in cui l&apos;impianto lavora a carico variabile — che in un
-              servizio continuo sono la maggioranza.
+            <p className="mt-10 text-muted-foreground leading-relaxed max-w-3xl">
+              {regolazioneChiusura}
             </p>
           </div>
         </section>
