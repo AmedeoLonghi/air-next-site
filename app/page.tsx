@@ -18,6 +18,7 @@ import { Ottimizza } from "@/components/sections/ottimizza";
 import { ConformitaNormativa } from "@/components/sections/conformita-normativa";
 import { QualitaAria } from "@/components/sections/qualita-aria";
 import { CaseStudyPreview } from "@/components/sections/case-study-preview";
+import { Trustpilot } from "@/components/sections/trustpilot";
 import { ContactForm } from "@/components/sections/contact-form";
 
 export default function Home() {
@@ -31,6 +32,7 @@ export default function Home() {
         <ConformitaNormativa />
         <QualitaAria />
         <CaseStudyPreview />
+        <Trustpilot />
         <ContactForm />
       </main>
       <Footer />
