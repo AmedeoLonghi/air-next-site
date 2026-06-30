@@ -22,7 +22,7 @@ export function Footer() {
 
           <div className="col-span-2 md:col-span-1">
             <Link href="/" className="mb-4 inline-block">
-              <img src="/logo.svg" alt="Air-next" width="105" height="24" />
+              <img src="/logo.svg" alt="Air-next" width="94" height="24" />
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed max-w-xs">
               Soluzioni tecniche per aria compressa, gas tecnici e refrigerazione industriale.
