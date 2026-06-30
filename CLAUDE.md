@@ -19,19 +19,23 @@ Il sito è multipagina con App Router Next.js. NON è una single page applicatio
 - Aria Compressa (dropdown)
 - Refrigerazione Industriale
 - Gas Tecnici
-- Ottimizza il tuo impianto (dropdown) — entry point strategici
+- Analisi e Diagnosi (dropdown) — entry point strategici (rinominato da "Ottimizza il tuo impianto")
 
 ### Pagine e route
 
 **Home** — `/`
-Comunica autorevolezza tecnica. Sezioni: hero con headline problema/soluzione, tre macro-aree di business, sezione "Ottimizza il tuo impianto" con CTA verso audit e ricerca perdite, case study in evidenza, form contatto.
+Comunica autorevolezza tecnica. Sezioni: hero con headline problema/soluzione, tre macro-aree di business, sezione "Analisi e Diagnosi" con CTA verso audit e ricerca perdite, case study in evidenza, form contatto.
 
 **Aria Compressa** — `/aria-compressa`
 Pagina hub con link alle sottopagine. Introduce la competenza core.
 
 Sottopagine aria compressa:
-- `/aria-compressa/produzione` — compressori, fornitura, manutenzione, ricambi
-- `/aria-compressa/trattamento` — filtrazione, essiccazione, qualità aria
+- `/aria-compressa/produzione` — hub compressori con tipologie, regolazione, motori IE. Ha card/link verso sottopagine per tecnologia.
+  - `/aria-compressa/produzione/pistoni` ✅ COMPLETATA — principio, lubrificati/oil-free, applicazioni critiche, criteri di scelta
+  - `/aria-compressa/produzione/vite` — DA FARE
+  - `/aria-compressa/produzione/scroll` — DA FARE
+  - `/aria-compressa/produzione/turbo` — DA FARE
+- `/aria-compressa/trattamento` — filtrazione, essiccazione (refrigerazione, adsorbimento a freddo/caldo, membrana), qualità aria
 - `/aria-compressa/distribuzione` — reti, perdite di pressione, ottimizzazione
 - `/aria-compressa/analisi-qualita` — analisi qualità aria compressa (servizio a pagamento)
 
@@ -41,7 +45,7 @@ Sistemi di raffreddamento, chiller, noleggio sistemi di raffreddamento.
 **Gas Tecnici** — `/gas-tecnici`
 Generatori di azoto e ossigeno, purezza controllata, costi operativi.
 
-**Ottimizza il tuo impianto** — `/ottimizza`
+**Analisi e Diagnosi** — `/ottimizza`
 Pagina hub che introduce i quattro servizi di ingresso. Tono: "se il tuo impianto consuma più del necessario, partiamo da qui."
 
 Sottopagine Trojan horse:
@@ -81,7 +85,7 @@ Importare da Google Fonts con i pesi: 400, 500, 600, 700.
 ## SEO
 Ogni pagina ha title, meta description, og:title, og:description specifici.
 Le pagine Trojan horse hanno priorità SEO massima — audit energetico e ricerca perdite intercettano traffico a intenzione commerciale alta.
-Sitemap.xml generata automatic ogni build.
+Sitemap.xml generata automaticamente ogni build.
 Slug URL in italiano, puliti, senza stop words inutili.
 
 ## Competitor
@@ -98,13 +102,34 @@ Air-next si differenzia per indipendenza di marchio e approccio analitico.
 - Tailwind CSS v4
 - Shadcn/ui (base-nova, buttonVariants + cn() per link stilizzati)
 - Plus Jakarta Sans da Google Fonts
+- recharts (^3.9.1) — usato in components/sections/ie-motor-chart.tsx per grafico efficienza motori IE
 - Sitemap.xml autogenerata
 
 ## Regole critiche per Claude Code
+
+### Regole di sviluppo
 1. Button non supporta asChild — usare buttonVariants + cn() direttamente sul componente Link
 2. Tailwind v4 non usa tailwind.config.js — configurazione via CSS in globals.css
 3. Distinguere Server Components e Client Components — usare "use client" solo dove necessario
 4. Ogni nuova funzionalità: creare prima documento di progetto in /docs, attendere conferma, poi implementare
 5. Aggiornare CLAUDE.md quando cambiano struttura o decisioni di progetto
-6. Nessuna metrica o statistica inventata nei contenuti
-7. CRM integration nel form contatti — da definire il provider
+6. CRM integration nel form contatti — da definire il provider
+7. I grafici recharts vanno in componenti separati con "use client" per non inquinare i Server Component
+
+### Regole di contenuto — PERMANENTI, NESSUNA ECCEZIONE
+
+8. **MAI nominare produttori, brand o marchi commerciali nel testo del sito.**
+   Non scrivere mai nomi di costruttori (es. Atlas Copco, Ingersoll Rand, Gentilin, Kaeser, ecc.).
+   Usare sempre descrizioni generiche della tecnologia o della gamma: "compressori a vite oil-free", "gamme dedicate al settore medicale", ecc.
+   Motivo: Air-next è partner tecnico indipendente, non rivenditore di marchio. Citare brand rompe il posizionamento.
+
+9. **MAI usare il carattere em dash (—, U+2014) in nessun punto del testo.**
+   Sostituire sempre con:
+   - virgola, per incisi e apposizioni ("la macchina, progettata per...")
+   - due punti, per introdurre un elenco o una conseguenza ("tre contaminanti: particolato, umidità, olio")
+   - parentesi, per dati parentetici ("risparmio di €7.229/anno (riduzione 52,8%)")
+   - punto e nuova frase, quando l'inciso è autonomo
+   Per i label breadcrumb in uppercase usare il punto centrale: "Aria compressa · produzione · pistoni"
+   Il carattere è vietato anche nei commenti JSX e nei dati (JSON schema, array di dati, ecc.).
+
+10. **Nessuna metrica o statistica inventata nei contenuti.** Se non c'è un dato verificato, non si scrive.
