@@ -1,10 +1,9 @@
 import { Resend } from "resend";
 import { NextResponse } from "next/server";
 
-// "from" richiede dominio verificato in Resend.
-// Prima della verifica usare: onboarding@resend.dev (solo per test verso la propria email Resend)
-// Dopo la verifica del dominio air-next.it: noreply@air-next.it
-const FROM = "Air-next <noreply@air-next.it>";
+// TODO: dopo la verifica del dominio air-next.it in Resend, cambiare in:
+// const FROM = "Air-next <noreply@air-next.it>";
+const FROM = "Air-next <onboarding@resend.dev>";
 const TO = "info@air-next.it";
 
 export async function POST(request: Request) {
