@@ -63,7 +63,7 @@ export function MacroAree() {
                       "self-start gap-1"
                     )}
                   >
-                    Scopri l&apos;offerta
+                    Approfondisci
                   </Link>
                 </CardContent>
               </Card>
