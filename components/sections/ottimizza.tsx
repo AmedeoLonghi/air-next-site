@@ -59,12 +59,7 @@ export function Ottimizza() {
               <Link
                 key={s.titolo}
                 href={s.href}
-                className={cn(
-                  "group flex gap-4 rounded-xl border p-6 transition-colors hover:bg-muted/60",
-                  s.priorita
-                    ? "border-primary/30 bg-primary/5"
-                    : "border-border bg-background"
-                )}
+                className="group flex gap-4 rounded-xl border border-border bg-background p-6 transition-colors hover:bg-muted/60"
               >
                 <div className="mt-0.5 shrink-0 inline-flex h-9 w-9 items-center justify-center rounded-lg bg-primary/10">
                   <Icon className="h-5 w-5 text-primary" />
