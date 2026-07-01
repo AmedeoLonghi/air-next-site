@@ -34,7 +34,7 @@ Sottopagine aria compressa:
   - `/aria-compressa/produzione/pistoni` ✅ COMPLETATA — principio, lubrificati/oil-free, applicazioni critiche, criteri di scelta
   - `/aria-compressa/produzione/regolazione-motori` ✅ COMPLETATA — ON/OFF, carico/vuoto, modulante, VSD, logica multi-compressore, classi IE3/IE4/IE5 con grafico e tabella
   - `/aria-compressa/produzione/vite` ✅ COMPLETATA — oil-injected/oil-free, monostadio/bistadio, fisso/VSD, criteri di selezione
-  - `/aria-compressa/produzione/scroll` — PLACEHOLDER (da sviluppare)
+  - `/aria-compressa/produzione/scroll` ✅ COMPLETATA — principio spirali, caratteristiche operative, livello acustico, applicazioni, confronto vs pistone/vite oil-free
   - `/aria-compressa/produzione/turbo` — PLACEHOLDER (da sviluppare)
 - `/aria-compressa/trattamento` — filtrazione, essiccazione (refrigerazione, adsorbimento a freddo/caldo, membrana), qualità aria
 - `/aria-compressa/distribuzione` — reti, perdite di pressione, ottimizzazione
