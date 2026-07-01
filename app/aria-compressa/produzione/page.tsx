@@ -224,42 +224,49 @@ export default function Produzione() {
           </div>
         </section>
 
-        {/* Regolazione e motori — introduzione compatta */}
+        {/* Regolazione e motori — layout 50/50 */}
         <section className="py-20 sm:py-24 bg-muted/40">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="max-w-3xl">
-              <h2 className="text-2xl font-bold tracking-tight sm:text-3xl mb-8">
-                Regolazione e motori elettrici
-              </h2>
-              <div className="space-y-5 text-muted-foreground leading-relaxed">
-                <p>
-                  Le logiche di regolazione dei compressori non sono equivalenti tra loro.
-                  Un compressore può funzionare in ON/OFF, carico/vuoto, con parzializzazione
-                  della portata o con variazione della velocità tramite inverter (VSD). La
-                  differenza non è solo tecnica: la logica di regolazione determina quanta energia
-                  si consuma nelle ore in cui il compressore non lavora a pieno carico, condizione
-                  che in un impianto reale è la maggioranza del tempo operativo.
-                </p>
-                <p>
-                  La classe di efficienza del motore elettrico incide sul comportamento ai carichi
-                  parziali, non solo sul rendimento di targa. Un motore IE5 abbinato a regolazione
-                  VSD contiene le perdite anche quando il compressore lavora a metà portata; un
-                  motore IE3 su macchina ON/OFF le accumula ogni volta che la macchina si ferma e
-                  riparte. La scelta corretta dipende dal profilo di consumo reale dell&apos;impianto.
-                </p>
+            <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-start">
+
+              {/* Colonna sinistra: testo + bottone */}
+              <div>
+                <h2 className="text-2xl font-bold tracking-tight sm:text-3xl mb-8">
+                  Regolazione e motori elettrici
+                </h2>
+                <div className="space-y-5 text-muted-foreground leading-relaxed">
+                  <p>
+                    Le logiche di regolazione dei compressori non sono equivalenti tra loro.
+                    Un compressore può funzionare in ON/OFF, carico/vuoto, con parzializzazione
+                    della portata o con variazione della velocità tramite inverter (VSD). La
+                    differenza non è solo tecnica: la logica di regolazione determina quanta energia
+                    si consuma nelle ore in cui il compressore non lavora a pieno carico, condizione
+                    che in un impianto reale è la maggioranza del tempo operativo.
+                  </p>
+                  <p>
+                    La classe di efficienza del motore elettrico incide sul comportamento ai carichi
+                    parziali, non solo sul rendimento di targa. Un motore IE5 abbinato a regolazione
+                    VSD contiene le perdite anche quando il compressore lavora a metà portata; un
+                    motore IE3 su macchina ON/OFF le accumula ogni volta che la macchina si ferma e
+                    riparte. La scelta corretta dipende dal profilo di consumo reale dell&apos;impianto.
+                  </p>
+                </div>
+                <div className="mt-8">
+                  <Link
+                    href="/aria-compressa/produzione/regolazione-motori"
+                    className={cn(buttonVariants({ variant: "outline", size: "sm" }), "gap-1")}
+                  >
+                    Approfondimento tecnico su regolazione e motori
+                    <ArrowRight size={14} />
+                  </Link>
+                </div>
               </div>
-              <div className="mt-10">
+
+              {/* Colonna destra: grafico */}
+              <div>
                 <IeMotorChart />
               </div>
-              <div className="mt-8">
-                <Link
-                  href="/aria-compressa/produzione/regolazione-motori"
-                  className={cn(buttonVariants({ variant: "outline", size: "sm" }), "gap-1")}
-                >
-                  Approfondimento tecnico su regolazione e motori
-                  <ArrowRight size={14} />
-                </Link>
-              </div>
+
             </div>
           </div>
         </section>
@@ -299,9 +306,52 @@ export default function Produzione() {
                   sbagliato.
                 </p>
               </div>
+            </div>
+          </div>
+        </section>
 
-              {/* Card audit reali */}
-              <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2">
+        {/* Cosa emerge quando si misurano gli impianti — layout 50/50 */}
+        <section className="py-20 sm:py-24 bg-muted/40">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-start">
+
+              {/* In DOM: testo per primo → mobile: titolo+intro in cima */}
+              <div className="lg:order-2">
+                <h2 className="text-2xl font-bold tracking-tight sm:text-3xl mb-6">
+                  Cosa emerge quando si misurano gli impianti
+                </h2>
+                <div className="space-y-4 text-muted-foreground leading-relaxed">
+                  <p>
+                    I dati che seguono provengono da audit strumentali su impianti reali,
+                    monitorati per sette giorni consecutivi con acquisizione continua di
+                    portata, pressione e consumo energetico. Non sono stime: sono profili
+                    di carico rilevati su impianti in esercizio.
+                  </p>
+                  <p className="text-xs">
+                    I nomi aziendali sono omessi per riservatezza. Le metriche sono quelle
+                    dei report originali.
+                  </p>
+                </div>
+                <div className="mt-8 flex flex-col sm:flex-row gap-3 items-start">
+                  <Link
+                    href="/ottimizza/audit-energetico"
+                    className={cn(buttonVariants({ size: "sm" }), "gap-1")}
+                  >
+                    Prenota un audit energetico
+                    <ArrowRight size={14} />
+                  </Link>
+                  <Link
+                    href="/case-study"
+                    className={cn(buttonVariants({ variant: "outline", size: "sm" }), "gap-1")}
+                  >
+                    Vedi tutti i casi studio
+                    <ArrowRight size={14} />
+                  </Link>
+                </div>
+              </div>
+
+              {/* In DOM: card per seconde → mobile: card dopo il testo */}
+              <div className="lg:order-1 flex flex-col gap-5">
                 {auditCards.map((c) => (
                   <div
                     key={c.settore}
@@ -320,28 +370,12 @@ export default function Produzione() {
                 ))}
               </div>
 
-              <div className="mt-8 flex flex-col sm:flex-row gap-3 items-start">
-                <Link
-                  href="/ottimizza/audit-energetico"
-                  className={cn(buttonVariants({ size: "sm" }), "gap-1")}
-                >
-                  Prenota un audit energetico
-                  <ArrowRight size={14} />
-                </Link>
-                <Link
-                  href="/case-study"
-                  className={cn(buttonVariants({ variant: "outline", size: "sm" }), "gap-1")}
-                >
-                  Vedi tutti i casi studio
-                  <ArrowRight size={14} />
-                </Link>
-              </div>
             </div>
           </div>
         </section>
 
         {/* CTA */}
-        <section className="py-20 sm:py-28 bg-muted/40">
+        <section className="py-20 sm:py-28">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="max-w-2xl">
               <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">
