@@ -4,7 +4,7 @@ import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { Settings, Filter, Network, Microscope, ArrowRight } from "lucide-react";
+import { Settings, Filter, Network, ScanSearch, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Impianti Aria Compressa | Air-next",
@@ -40,11 +40,12 @@ const sottopagine = [
     href: "/aria-compressa/distribuzione",
   },
   {
-    icon: Microscope,
-    titolo: "Analisi Qualità Aria",
+    icon: ScanSearch,
+    titolo: "Analisi e Diagnosi",
     descrizione:
-      "Campionamento in linea e analisi in laboratorio secondo ISO 8573-1. Per processi che richiedono una classe di purezza certificata: farmaceutico, alimentare, elettronico, verniciatura industriale.",
-    href: "/aria-compressa/analisi-qualita",
+      "Prima di qualsiasi intervento sull'impianto, misuriamo. Profilo di portata, consumi reali, dispersioni nella rete: i dati strumentali che permettono di scegliere la soluzione giusta invece di indovinarla.",
+    href: "/ottimizza",
+    cta: "Vai all'Analisi e Diagnosi",
   },
 ];
 
@@ -97,7 +98,7 @@ export default function AriaCompressa() {
                         {s.descrizione}
                       </p>
                       <div className="mt-4 flex items-center gap-1 text-sm font-medium text-primary">
-                        Approfondisci
+                        {s.cta ?? "Approfondisci"}
                         <ArrowRight size={14} />
                       </div>
                     </div>
