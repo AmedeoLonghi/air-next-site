@@ -9,11 +9,11 @@ import { Settings, Filter, Network, Microscope, ArrowRight } from "lucide-react"
 export const metadata: Metadata = {
   title: "Impianti Aria Compressa | Air-next",
   description:
-    "Produzione, trattamento, distribuzione e analisi qualità dell'aria compressa. Fornitura, manutenzione e ricambi multimarca per impianti industriali.",
+    "Produzione, trattamento, distribuzione e analisi qualità dell'aria compressa. Fornitura, manutenzione e ricambi su qualsiasi macchina installata.",
   openGraph: {
     title: "Impianti Aria Compressa | Air-next",
     description:
-      "Produzione, trattamento, distribuzione e analisi qualità dell'aria compressa. Fornitura, manutenzione e ricambi multimarca per impianti industriali.",
+      "Produzione, trattamento, distribuzione e analisi qualità dell'aria compressa. Fornitura, manutenzione e ricambi su qualsiasi macchina installata.",
   },
 };
 
@@ -22,7 +22,7 @@ const sottopagine = [
     icon: Settings,
     titolo: "Produzione",
     descrizione:
-      "Compressori a vite, scroll e centrifughi. Selezione basata sul profilo di portata reale, non sul catalogo. Tecnologie di regolazione on/off, modulante, VSD e motori a magneti permanenti IE5. Manutenzione programmata e ricambi multimarca.",
+      "Compressori a vite, scroll e centrifughi. Selezione basata sul profilo di portata reale, non sul catalogo. Tecnologie di regolazione on/off, modulante, VSD e motori a magneti permanenti IE5. Manutenzione programmata e ricambi su qualsiasi macchina installata.",
     href: "/aria-compressa/produzione",
   },
   {
@@ -108,7 +108,7 @@ export default function AriaCompressa() {
           </div>
         </section>
 
-        {/* ── Approccio multimarca ── */}
+        {/* Approccio tecnico indipendente */}
         <section className="py-20 sm:py-24">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl">

@@ -9,11 +9,11 @@ import { ArrowRight } from "lucide-react";
 export const metadata: Metadata = {
   title: "Refrigerazione Industriale | Chiller e Sistemi di Raffreddamento | Air-next",
   description:
-    "Sistemi di refrigerazione industriale per processi produttivi. Chiller, free cooling e soluzioni a noleggio. Manutenzione e assistenza tecnica multimarca.",
+    "Sistemi di refrigerazione industriale per processi produttivi. Chiller, free cooling e soluzioni a noleggio. Manutenzione e assistenza tecnica su qualsiasi sistema installato.",
   openGraph: {
     title: "Refrigerazione Industriale | Chiller e Sistemi di Raffreddamento | Air-next",
     description:
-      "Sistemi di refrigerazione industriale per processi produttivi. Chiller, free cooling e soluzioni a noleggio. Manutenzione e assistenza tecnica multimarca.",
+      "Sistemi di refrigerazione industriale per processi produttivi. Chiller, free cooling e soluzioni a noleggio. Manutenzione e assistenza tecnica su qualsiasi sistema installato.",
   },
 };
 
@@ -104,7 +104,7 @@ export default function RefrigerazioneIndustriale() {
                 Chiller, free cooling e sistemi a circuito chiuso per raffreddamento
                 di stampi, macchine utensili, processi chimici e centrali di
                 compressori. Soluzioni in acquisto e a noleggio, con assistenza
-                tecnica diretta e manutenzione multimarca.
+                tecnica diretta e manutenzione su qualsiasi sistema installato.
               </p>
               <div className="mt-10">
                 <Link

@@ -9,11 +9,11 @@ import { ArrowRight } from "lucide-react";
 export const metadata: Metadata = {
   title: "Compressori Aria Compressa | Fornitura e Manutenzione | Air-next",
   description:
-    "Fornitura, installazione e manutenzione di compressori aria compressa multimarca. Selezione basata su profilo di portata reale, non su catalogo.",
+    "Fornitura, installazione e manutenzione di compressori aria compressa. Interveniamo su qualsiasi macchina installata. Selezione basata su profilo di portata reale, non su catalogo.",
   openGraph: {
     title: "Compressori Aria Compressa | Fornitura e Manutenzione | Air-next",
     description:
-      "Fornitura, installazione e manutenzione di compressori aria compressa multimarca. Selezione basata su profilo di portata reale, non su catalogo.",
+      "Fornitura, installazione e manutenzione di compressori aria compressa. Interveniamo su qualsiasi macchina installata. Selezione basata su profilo di portata reale, non su catalogo.",
   },
 };
 
@@ -22,7 +22,7 @@ const schema = {
   "@type": "Service",
   name: "Fornitura e Manutenzione Compressori Aria Compressa",
   description:
-    "Fornitura, installazione e manutenzione di compressori aria compressa multimarca. Selezione basata sul profilo di portata e carico reale.",
+    "Fornitura, installazione e manutenzione di compressori aria compressa su qualsiasi macchina installata. Selezione basata sul profilo di portata e carico reale.",
   provider: {
     "@type": "LocalBusiness",
     name: "Air-next",
@@ -70,6 +70,27 @@ const tipologie = [
   },
 ];
 
+const manutenzione = [
+  {
+    ore: "4.000 h",
+    label: "Intervento base",
+    testo:
+      "Sostituzione kit filtri, cambio olio, verifica valvole di minima e massima pressione, pulizia sistema di raffreddamento. Eseguito secondo le prescrizioni del costruttore per ogni modello installato.",
+  },
+  {
+    ore: "8.000 h",
+    label: "Intervento completo",
+    testo:
+      "Tutto quanto previsto a 4.000 h, integrato con le voci aggiuntive indicate dal costruttore per questo intervallo. Le lavorazioni specifiche variano in base al modello e al regime di lavoro della macchina.",
+  },
+  {
+    ore: "25.000-30.000 h",
+    label: "Revisione gruppo",
+    testo:
+      "Sostituzione cuscinetti del gruppo vite e del motore elettrico, verifica dei giochi tra rotori, ispezione meccanica completa. Intervento che previene il cedimento del gruppo vite, il componente più critico e costoso dell'impianto.",
+  },
+];
+
 export default function Produzione() {
   return (
     <>
@@ -94,8 +115,7 @@ export default function Produzione() {
                 La taglia e la tecnologia di regolazione di un compressore determinano
                 il consumo energetico per tutta la vita operativa della macchina.
                 Selezioniamo in funzione del profilo di portata effettivo, non della
-                taglia massima stimata. Fornitura, installazione e manutenzione
-                multimarca.
+                taglia massima stimata. Interveniamo su qualsiasi macchina installata.
               </p>
               <div className="mt-10">
                 <Link
@@ -143,8 +163,49 @@ export default function Produzione() {
           </div>
         </section>
 
-        {/* Regolazione e motori — introduzione compatta */}
+        {/* Manutenzione */}
         <section className="py-20 sm:py-24">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl font-bold tracking-tight sm:text-3xl mb-4">
+              Manutenzione
+            </h2>
+            <p className="text-muted-foreground leading-relaxed max-w-3xl mb-10">
+              Gli interventi seguono intervalli di ore macchina definiti dal costruttore.
+              Il rispetto degli intervalli non è una formalità: un separatore saturo o un
+              filtro olio degradato generano guasti evitabili che si accumulano silenziosamente
+              sulle ore di esercizio.
+            </p>
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
+              {manutenzione.map((m) => (
+                <div
+                  key={m.label}
+                  className="rounded-xl border border-border bg-card p-6 flex flex-col gap-3"
+                >
+                  <div className="text-3xl font-bold text-primary leading-none">{m.ore}</div>
+                  <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">{m.label}</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{m.testo}</p>
+                </div>
+              ))}
+            </div>
+            <p className="mt-6 text-xs text-muted-foreground max-w-3xl">
+              Gli intervalli e le lavorazioni specifiche sono definiti dal costruttore per ogni
+              modello. Il piano di manutenzione applicato è quello ufficiale della macchina
+              installata.
+            </p>
+            <div className="mt-8">
+              <Link
+                href="/contatti"
+                className={cn(buttonVariants({ variant: "outline", size: "sm" }), "gap-1")}
+              >
+                Pianifica la manutenzione del tuo impianto
+                <ArrowRight size={14} />
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* Regolazione e motori — introduzione compatta */}
+        <section className="py-20 sm:py-24 bg-muted/40">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl">
               <h2 className="text-2xl font-bold tracking-tight sm:text-3xl mb-8">
@@ -173,69 +234,6 @@ export default function Produzione() {
                   className={cn(buttonVariants({ variant: "outline", size: "sm" }), "gap-1")}
                 >
                   Approfondimento tecnico su regolazione e motori
-                  <ArrowRight size={14} />
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Manutenzione */}
-        <section className="py-20 sm:py-24 bg-muted/40">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="max-w-3xl">
-              <h2 className="text-2xl font-bold tracking-tight sm:text-3xl mb-8">
-                Manutenzione: programmata e revisione gruppo
-              </h2>
-              <p className="text-muted-foreground leading-relaxed mb-10">
-                Un compressore a vite è una macchina con parti in movimento sottoposte a usura
-                controllata. La distinzione rilevante non è tra ordinaria e straordinaria, ma tra
-                manutenzione programmata su intervalli definiti e revisione del gruppo compressore,
-                che interviene su componenti a vita utile più lunga ma con impatto critico
-                sull&apos;affidabilità dell&apos;impianto.
-              </p>
-
-              <div className="space-y-10">
-                <div>
-                  <h3 className="font-semibold text-lg mb-4">Manutenzione programmata</h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Gli interventi seguono intervalli di ore macchina o calendario, indipendentemente
-                    dalle condizioni apparenti dei componenti. Includono la sostituzione del kit filtri
-                    (filtro aspirazione, filtro olio, separatore olio-aria), il cambio olio o la
-                    verifica del livello secondo la viscosità e il tipo indicati dal costruttore,
-                    l&apos;ispezione delle cinghie di trasmissione dove presenti, la verifica delle
-                    valvole di minima pressione e sicurezza, la pulizia dei radiatori e dei sistemi
-                    di raffreddamento. Il rispetto degli intervalli non è una formalità: un separatore
-                    saturo aumenta la perdita di carico interna e riduce l&apos;efficienza; un filtro
-                    olio degradato compromette la lubrificazione del gruppo vite. L&apos;effetto non è
-                    immediato, ma si accumula sulle ore di esercizio fino a generare guasti evitabili.
-                  </p>
-                </div>
-
-                <div>
-                  <h3 className="font-semibold text-lg mb-4">Revisione gruppo compressore</h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    I cuscinetti del gruppo vite e del motore elettrico sono componenti a usura
-                    controllata con vita utile definita in ore macchina, tipicamente nell&apos;ordine
-                    delle 16.000-24.000 ore secondo il tipo di macchina e il regime di lavoro. La loro
-                    sostituzione non è un intervento straordinario: è un intervento programmato su
-                    componenti critici, con una logica identica alla manutenzione ordinaria ma su scala
-                    temporale più lunga. Un cuscinetto del gruppo vite che supera la vita utile nominale
-                    non cede in modo prevedibile: può cedere in modo repentino, trascinando nel guasto i
-                    rotori, l&apos;albero e il corpo del compressore. Il costo di una revisione preventiva
-                    dei cuscinetti è una frazione del costo di ricostruzione o sostituzione del gruppo
-                    vite. È su questo tipo di valutazione che si misura la differenza tra una gestione
-                    tecnica dell&apos;impianto e una gestione a guasto.
-                  </p>
-                </div>
-              </div>
-
-              <div className="mt-10">
-                <Link
-                  href="/contatti"
-                  className={cn(buttonVariants({ variant: "outline", size: "sm" }), "gap-1")}
-                >
-                  Pianifica la manutenzione del tuo impianto
                   <ArrowRight size={14} />
                 </Link>
               </div>
