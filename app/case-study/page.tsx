@@ -39,15 +39,45 @@ const caseStudies = [
     luogo: "Provincia di Novara",
     tag: "Audit energetico",
     titolo: "Centrale monoblocco da 160 kW: risparmio di €20.280/anno con configurazione modulare",
-    impianto: "1 compressore VSD da 160 kW, produzione continua lun–sab",
+    impianto: "1 compressore VSD da 160 kW, produzione continua lun-sab",
     metriche: [
-      { label: "Portata media rilevata", value: "16,5–18 m³/min · consumo domenicale residuo 6,5 m³/min" },
-      { label: "Distribuzione carico", value: "49% del tempo tra 50–75% della capacità · 28% oltre il 75%" },
+      { label: "Portata media rilevata", value: "16,5-18 m³/min · consumo domenicale residuo 6,5 m³/min" },
+      { label: "Distribuzione carico", value: "49% del tempo tra 50-75% della capacità · 28% oltre il 75%" },
       { label: "Costo energetico annuale stimato", value: "€ 107.640" },
       { label: "Risparmio con configurazione modulare", value: "€ 20.280/anno (riduzione 18,9%)" },
     ],
     analisi:
       "Il profilo di carico mostrava un picco produttivo durante i giorni lavorativi e un consumo residuo domenicale di 6,5 m³/min (perdite di rete). La macchina da 160 kW, ottimizzata per il picco, lavorava in condizioni di scarsa efficienza durante il 49% del tempo. La configurazione modulare con una macchina base più una di supporto per i picchi ha consentito di ridurre il consumo medio senza perdere la copertura del picco.",
+  },
+  {
+    settore: "Componentistica industriale",
+    luogo: "Provincia di Novara",
+    tag: "Ricerca perdite",
+    titolo: "15 dispersioni per 2.943 euro annui su impianto con 2.000 ore di funzionamento",
+    impianto: "Rete di distribuzione di piccola taglia, 15 punti di dispersione identificati con rilevamento a ultrasuoni",
+    metriche: [
+      { label: "Dispersioni rilevate", value: "15" },
+      { label: "Portata totale dispersa", value: "754,9 l/min" },
+      { label: "Ore di funzionamento annue", value: "2.000 h" },
+      { label: "Costo energetico delle perdite", value: "€ 2.943/anno" },
+    ],
+    analisi:
+      "Il rilievo ha evidenziato una presenza significativa di raccordi ad innesto rapido e tubazioni usurate, con dispersioni difficilmente identificabili senza strumentazione a causa dei continui flussi d'aria necessari al processo produttivo. Il report ha permesso di pianificare la sostituzione progressiva dei componenti deteriorati per priorità economica.",
+  },
+  {
+    settore: "Lavorazioni meccaniche e CNC",
+    luogo: "Provincia di Alessandria",
+    tag: "Ricerca perdite",
+    titolo: "19 dispersioni su tre aree produttive: 879 l/min di aria dispersa identificata e classificata",
+    impianto: "Rete di distribuzione su tre aree distinte (magazzino, reparto plotter, produzione), 19 punti di dispersione identificati",
+    metriche: [
+      { label: "Dispersioni rilevate", value: "19" },
+      { label: "Portata totale dispersa", value: "879,1 l/min" },
+      { label: "Ore di funzionamento annue", value: "2.112 h" },
+      { label: "Costo energetico delle perdite", value: "€ 3.280/anno" },
+    ],
+    analisi:
+      "Le dispersioni erano distribuite su tre aree distinte con priorità differenziate. La classificazione per priorità economica ha consentito di pianificare gli interventi partendo dai punti con maggiore incidenza sul costo annuale, senza dover fermare tutte le aree contemporaneamente.",
   },
 ];
 
