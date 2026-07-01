@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
+import { IeMotorChart } from "@/components/sections/ie-motor-chart";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { ArrowRight } from "lucide-react";
@@ -88,6 +89,25 @@ const manutenzione = [
     label: "Revisione gruppo",
     testo:
       "Sostituzione cuscinetti del gruppo vite e del motore elettrico, verifica dei giochi tra rotori, ispezione meccanica completa. Intervento che previene il cedimento del gruppo vite, il componente più critico e costoso dell'impianto.",
+  },
+];
+
+const auditCards = [
+  {
+    settore: "Componentistica industriale",
+    luogo: "Provincia di Alessandria",
+    risparmio: "€ 7.229/anno",
+    riduzione: "52,8%",
+    testo:
+      "Centrale da 44 kW sovradimensionata al 96% della capacità. Portata media rilevata: 0,269 m³/min su 7,4 m³/min installati. Sostituita con compressore VSD da 14 kW dimensionato sul profilo reale.",
+  },
+  {
+    settore: "Automazione industriale",
+    luogo: "Provincia di Novara",
+    risparmio: "€ 20.280/anno",
+    riduzione: "18,9%",
+    testo:
+      "Centrale monoblocco da 160 kW con consumo domenicale residuo di 6,5 m³/min (perdite di rete). Ottimizzata con configurazione modulare basata sul profilo di carico orario rilevato su ciclo produttivo completo.",
   },
 ];
 
@@ -228,6 +248,9 @@ export default function Produzione() {
                   riparte. La scelta corretta dipende dal profilo di consumo reale dell&apos;impianto.
                 </p>
               </div>
+              <div className="mt-10">
+                <IeMotorChart />
+              </div>
               <div className="mt-8">
                 <Link
                   href="/aria-compressa/produzione/regolazione-motori"
@@ -276,12 +299,40 @@ export default function Produzione() {
                   sbagliato.
                 </p>
               </div>
-              <div className="mt-8">
+
+              {/* Card audit reali */}
+              <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2">
+                {auditCards.map((c) => (
+                  <div
+                    key={c.settore}
+                    className="rounded-xl border border-border bg-card p-6 flex flex-col gap-3"
+                  >
+                    <div>
+                      <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">{c.settore}</p>
+                      <p className="text-xs text-muted-foreground mt-0.5">{c.luogo}</p>
+                    </div>
+                    <div>
+                      <span className="text-2xl font-bold text-primary leading-none">{c.risparmio}</span>
+                      <span className="ml-2 text-sm text-muted-foreground">riduzione {c.riduzione}</span>
+                    </div>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{c.testo}</p>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-8 flex flex-col sm:flex-row gap-3 items-start">
                 <Link
                   href="/ottimizza/audit-energetico"
+                  className={cn(buttonVariants({ size: "sm" }), "gap-1")}
+                >
+                  Prenota un audit energetico
+                  <ArrowRight size={14} />
+                </Link>
+                <Link
+                  href="/case-study"
                   className={cn(buttonVariants({ variant: "outline", size: "sm" }), "gap-1")}
                 >
-                  Leggi come funziona l&apos;audit energetico
+                  Vedi tutti i casi studio
                   <ArrowRight size={14} />
                 </Link>
               </div>
