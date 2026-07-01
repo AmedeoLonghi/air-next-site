@@ -12,9 +12,8 @@ export function GoogleReviews() {
           </h2>
         </div>
 
-        {/* TODO: sostituire con widget Elfsight reale dopo aver creato account su elfsight.com/google-reviews e collegato il profilo Google Business Air-next */}
-        <div className="elfsight-app-INSERISCI-ID-WIDGET"></div>
-        <Script src="https://static.elfsight.com/platform/platform.js" strategy="lazyOnload" />
+        <Script src="https://elfsightcdn.com/platform.js" strategy="lazyOnload" />
+        <div className="elfsight-app-7584c086-14d2-4c75-a8ce-3ae07db0ce73" data-elfsight-app-lazy></div>
 
         <div className="mt-6 flex flex-col gap-2">
           <Link
