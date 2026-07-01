@@ -271,78 +271,92 @@ export default function Produzione() {
           </div>
         </section>
 
-        {/* Come selezioniamo */}
+        {/* Come selezioniamo + Cosa emerge — sezione unificata 7/12 + 5/12 */}
         <section className="py-20 sm:py-24">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="max-w-3xl">
-              <h2 className="text-2xl font-bold tracking-tight sm:text-3xl mb-8">
-                Come selezioniamo la macchina
-              </h2>
-              <div className="space-y-5 text-muted-foreground leading-relaxed">
-                <p>
-                  La selezione parte dal profilo di portata reale dell&apos;impianto.
-                  Se non è disponibile una misura strumentale precedente, il punto
-                  di partenza è un audit energetico: un periodo di monitoraggio
-                  con strumentazione dedicata restituisce il profilo orario di portata e
-                  consumo su un campione rappresentativo del ciclo produttivo.
-                  La durata del monitoraggio varia in base al processo produttivo:
-                  tipicamente una settimana, ma può estendersi fino a 45 giorni per
-                  cicli produttivi con variabilità stagionale o produzioni non continue.
-                </p>
-                <p>
-                  Dal profilo si ricava la portata media, la portata di punta e la
-                  variabilità del carico. Queste tre grandezze determinano la taglia
-                  nominale e la tecnologia di regolazione più adatta: un profilo
-                  molto variabile richiede un VSD; un profilo stabile con poche
-                  variazioni può essere servito efficacemente anche da una macchina
-                  on/off correttamente dimensionata.
-                </p>
-                <p>
-                  Il sovradimensionamento è la condizione più comune che incontriamo.
-                  Un compressore di grande potenza che serve un impianto con fabbisogno
-                  ridotto lavora per la maggior parte del tempo in scarico o a
-                  velocità minima, assorbendo energia senza produrre aria utile.
-                  Non c&apos;è tecnologia di regolazione che compensi un dimensionamento
-                  sbagliato.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
+            <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16 lg:items-start">
 
-        {/* Cosa emerge quando si misurano gli impianti — layout 50/50 */}
-        <section className="py-20 sm:py-24 bg-muted/40">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-start">
-
-              {/* In DOM: testo per primo → mobile: titolo+intro in cima */}
-              <div className="lg:order-2">
-                <h2 className="text-2xl font-bold tracking-tight sm:text-3xl mb-6">
-                  Cosa emerge quando si misurano gli impianti
+              {/* Colonna sinistra 7/12: testo metodologia + card audit */}
+              <div className="lg:col-span-7">
+                <h2 className="text-2xl font-bold tracking-tight sm:text-3xl mb-8">
+                  Come selezioniamo la macchina
                 </h2>
-                <div className="space-y-4 text-muted-foreground leading-relaxed">
+                <div className="space-y-5 text-muted-foreground leading-relaxed">
                   <p>
-                    I dati che seguono provengono da audit strumentali su impianti reali,
-                    monitorati per sette giorni consecutivi con acquisizione continua di
-                    portata, pressione e consumo energetico. Non sono stime: sono profili
-                    di carico rilevati su impianti in esercizio.
+                    La selezione parte dal profilo di portata reale dell&apos;impianto.
+                    Se non è disponibile una misura strumentale precedente, il punto
+                    di partenza è un audit energetico: un periodo di monitoraggio
+                    con strumentazione dedicata restituisce il profilo orario di portata e
+                    consumo su un campione rappresentativo del ciclo produttivo.
+                    La durata del monitoraggio varia in base al processo produttivo:
+                    tipicamente una settimana, ma può estendersi fino a 45 giorni per
+                    cicli produttivi con variabilità stagionale o produzioni non continue.
                   </p>
-                  <p className="text-xs">
-                    I nomi aziendali sono omessi per riservatezza. Le metriche sono quelle
-                    dei report originali.
+                  <p>
+                    Dal profilo si ricava la portata media, la portata di punta e la
+                    variabilità del carico. Queste tre grandezze determinano la taglia
+                    nominale e la tecnologia di regolazione più adatta: un profilo
+                    molto variabile richiede un VSD; un profilo stabile con poche
+                    variazioni può essere servito efficacemente anche da una macchina
+                    on/off correttamente dimensionata.
+                  </p>
+                  <p>
+                    Il sovradimensionamento è la condizione più comune che incontriamo.
+                    Un compressore di grande potenza che serve un impianto con fabbisogno
+                    ridotto lavora per la maggior parte del tempo in scarico o a
+                    velocità minima, assorbendo energia senza produrre aria utile.
+                    Non c&apos;è tecnologia di regolazione che compensi un dimensionamento
+                    sbagliato.
                   </p>
                 </div>
-                <div className="mt-8 flex flex-col sm:flex-row gap-3 items-start">
+
+                {/* Card audit impilate */}
+                <div className="mt-10 flex flex-col gap-5">
+                  {auditCards.map((c) => (
+                    <div
+                      key={c.settore}
+                      className="rounded-xl border border-border bg-card p-6 flex flex-col gap-3"
+                    >
+                      <div>
+                        <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">{c.settore}</p>
+                        <p className="text-xs text-muted-foreground mt-0.5">{c.luogo}</p>
+                      </div>
+                      <div>
+                        <span className="text-2xl font-bold text-primary leading-none">{c.risparmio}</span>
+                        <span className="ml-2 text-sm text-muted-foreground">riduzione {c.riduzione}</span>
+                      </div>
+                      <p className="text-sm text-muted-foreground leading-relaxed">{c.testo}</p>
+                    </div>
+                  ))}
+                </div>
+
+                <p className="mt-4 text-xs text-muted-foreground">
+                  Dati strumentali rilevati su impianti reali. Ragioni sociali omesse per riservatezza.
+                </p>
+              </div>
+
+              {/* Colonna destra 5/12: contesto + CTA, sticky */}
+              <div className="lg:col-span-5 lg:sticky lg:top-24">
+                <h3 className="text-lg font-bold tracking-tight mb-5">
+                  Cosa emerge quando si misurano gli impianti
+                </h3>
+                <p className="text-muted-foreground leading-relaxed text-sm">
+                  I dati che seguono provengono da audit strumentali su impianti reali,
+                  monitorati per sette giorni consecutivi con acquisizione continua di
+                  portata, pressione e consumo energetico. Non sono stime: sono profili
+                  di carico rilevati su impianti in esercizio.
+                </p>
+                <div className="mt-8 flex flex-col gap-3">
                   <Link
                     href="/ottimizza/audit-energetico"
-                    className={cn(buttonVariants({ size: "sm" }), "gap-1")}
+                    className={cn(buttonVariants({ size: "sm" }), "gap-1 justify-center sm:justify-start")}
                   >
                     Prenota un audit energetico
                     <ArrowRight size={14} />
                   </Link>
                   <Link
                     href="/case-study"
-                    className={cn(buttonVariants({ variant: "outline", size: "sm" }), "gap-1")}
+                    className={cn(buttonVariants({ variant: "outline", size: "sm" }), "gap-1 justify-center sm:justify-start")}
                   >
                     Vedi tutti i casi studio
                     <ArrowRight size={14} />
@@ -350,32 +364,12 @@ export default function Produzione() {
                 </div>
               </div>
 
-              {/* In DOM: card per seconde → mobile: card dopo il testo */}
-              <div className="lg:order-1 flex flex-col gap-5">
-                {auditCards.map((c) => (
-                  <div
-                    key={c.settore}
-                    className="rounded-xl border border-border bg-card p-6 flex flex-col gap-3"
-                  >
-                    <div>
-                      <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">{c.settore}</p>
-                      <p className="text-xs text-muted-foreground mt-0.5">{c.luogo}</p>
-                    </div>
-                    <div>
-                      <span className="text-2xl font-bold text-primary leading-none">{c.risparmio}</span>
-                      <span className="ml-2 text-sm text-muted-foreground">riduzione {c.riduzione}</span>
-                    </div>
-                    <p className="text-sm text-muted-foreground leading-relaxed">{c.testo}</p>
-                  </div>
-                ))}
-              </div>
-
             </div>
           </div>
         </section>
 
         {/* CTA */}
-        <section className="py-20 sm:py-28">
+        <section className="py-20 sm:py-28 bg-muted/40">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="max-w-2xl">
               <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">
