@@ -13,18 +13,18 @@ const aree = [
     href: "/aria-compressa",
   },
   {
-    icon: Thermometer,
-    titolo: "Refrigerazione Industriale",
-    descrizione:
-      "Sistemi di raffreddamento e chiller per processi industriali. Soluzioni in acquisto e a noleggio, con assistenza tecnica diretta.",
-    href: "/refrigerazione-industriale",
-  },
-  {
     icon: FlaskConical,
     titolo: "Gas Tecnici",
     descrizione:
       "Generatori di azoto e ossigeno on-site. Purezza controllata, eliminazione delle bombole, costi operativi documentati e prevedibili.",
     href: "/gas-tecnici",
+  },
+  {
+    icon: Thermometer,
+    titolo: "Refrigerazione Industriale",
+    descrizione:
+      "Sistemi di raffreddamento e chiller per processi industriali. Soluzioni in acquisto e a noleggio, con assistenza tecnica diretta.",
+    href: "/refrigerazione-industriale",
   },
 ];
 
@@ -45,28 +45,29 @@ export function MacroAree() {
           {aree.map((area) => {
             const Icon = area.icon;
             return (
-              <Card key={area.titolo} className="flex flex-col">
-                <CardHeader className="pb-3">
-                  <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
-                    <Icon className="h-5 w-5 text-primary" />
-                  </div>
-                  <h3 className="font-semibold text-lg">{area.titolo}</h3>
-                </CardHeader>
-                <CardContent className="flex flex-col flex-1 gap-4">
-                  <p className="text-sm text-muted-foreground leading-relaxed flex-1">
-                    {area.descrizione}
-                  </p>
-                  <Link
-                    href={area.href}
-                    className={cn(
-                      buttonVariants({ variant: "outline", size: "sm" }),
-                      "self-start gap-1"
-                    )}
-                  >
-                    Approfondisci
-                  </Link>
-                </CardContent>
-              </Card>
+              <Link key={area.titolo} href={area.href} className="flex">
+                <Card className="flex flex-col w-full transition-colors hover:bg-muted/60 cursor-pointer">
+                  <CardHeader className="pb-3">
+                    <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
+                      <Icon className="h-5 w-5 text-primary" />
+                    </div>
+                    <h3 className="font-semibold text-lg">{area.titolo}</h3>
+                  </CardHeader>
+                  <CardContent className="flex flex-col flex-1 gap-4">
+                    <p className="text-sm text-muted-foreground leading-relaxed flex-1">
+                      {area.descrizione}
+                    </p>
+                    <span
+                      className={cn(
+                        buttonVariants({ variant: "outline", size: "sm" }),
+                        "self-start gap-1 pointer-events-none"
+                      )}
+                    >
+                      Approfondisci
+                    </span>
+                  </CardContent>
+                </Card>
+              </Link>
             );
           })}
         </div>

@@ -1,39 +1,19 @@
-"use client";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import { buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
-import { useEffect } from "react";
-
-// TODO: configurazione Trustpilot
-// 1. Crea o accedi al profilo aziendale su business.trustpilot.com
-// 2. Vai su Integrazioni → TrustBox Widgets → copia il "Business Unit ID"
-// 3. Sostituisci il valore di BUSINESS_UNIT_ID qui sotto
-// 4. Scegli il template preferito su trustpilot.com/widgets e aggiorna TEMPLATE_ID
-//    Esempi template comuni:
-//      MicroReviewCount:  "5419b6ffb0d04a076446a9af"
-//      Slider:            "54ad5defc6454f065c28af8b"
-//      MiniCarousel:      "539adbd6dec7e10e686debee"
-//    Lista completa: https://support.trustpilot.com/hc/en-us/articles/115011421468
-const BUSINESS_UNIT_ID = "TODO_inserisci_business_unit_id";
-const TEMPLATE_ID = "54ad5defc6454f065c28af8b"; // Slider, cambiare se necessario
-const LOCALE = "it-IT";
+// TODO: Elfsight Google Reviews — integrazione
+// 1. Crea un account su elfsight.com (piano gratuito disponibile)
+// 2. Vai su "My Applications" e crea un widget "Google Reviews"
+// 3. Copia l'App ID dal codice embed (formato: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx)
+// 4. Aggiungi lo script Elfsight in app/layout.tsx:
+//    import Script from "next/script"
+//    <Script src="https://static.elfsight.com/platform/platform.js" strategy="lazyOnload" />
+// 5. Sostituisci il div placeholder qui sotto con:
+//    <div className="elfsight-app-TUO_APP_ID" data-elfsight-app-lazy></div>
 
 export function Trustpilot() {
-  useEffect(() => {
-    // Carica lo script Trustpilot se non è già presente
-    if (!document.querySelector('script[src*="widget.trustpilot.com"]')) {
-      const script = document.createElement("script");
-      script.src = "//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js";
-      script.async = true;
-      document.head.appendChild(script);
-    } else {
-      // Se lo script è già caricato, reinizializza i widget
-      if (typeof window !== "undefined" && (window as Window & { Trustpilot?: { loadFromElement: (el: Element) => void } }).Trustpilot) {
-        const tp = (window as Window & { Trustpilot?: { loadFromElement: (el: Element) => void } }).Trustpilot;
-        const widget = document.querySelector(".trustpilot-widget");
-        if (tp && widget) tp.loadFromElement(widget);
-      }
-    }
-  }, []);
-
   return (
     <section className="py-20 sm:py-24 bg-muted/40">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -43,23 +23,21 @@ export function Trustpilot() {
           </h2>
         </div>
 
-        {/* Widget Trustpilot, si autogestisce se non ci sono ancora recensioni */}
-        <div
-          className="trustpilot-widget"
-          data-locale={LOCALE}
-          data-template-id={TEMPLATE_ID}
-          data-businessunit-id={BUSINESS_UNIT_ID}
-          data-style-height="140px"
-          data-style-width="100%"
-          data-theme="light"
-        >
-          <a
-            href={`https://it.trustpilot.com/review/${BUSINESS_UNIT_ID}`}
-            target="_blank"
-            rel="noopener noreferrer"
+        {/* TODO: sostituire con il div del widget Elfsight una volta configurato l'account */}
+        {/* <div className="elfsight-app-TUO_APP_ID" data-elfsight-app-lazy></div> */}
+        <div className="rounded-xl border border-border bg-card p-10 flex items-center justify-center text-sm text-muted-foreground min-h-[120px]">
+          Widget Google Reviews (Elfsight) — da configurare
+        </div>
+
+        <div className="mt-6">
+          {/* TODO: sostituire # con il link diretto alla pagina Google Business di Air-next */}
+          <Link
+            href="#"
+            className={cn(buttonVariants({ variant: "outline", size: "sm" }), "gap-1")}
           >
-            Trustpilot
-          </a>
+            Lascia una recensione su Google
+            <ArrowRight size={14} />
+          </Link>
         </div>
       </div>
     </section>

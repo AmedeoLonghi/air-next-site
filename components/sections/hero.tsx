@@ -33,7 +33,7 @@ export function Hero() {
             </Link>
           </div>
           <p className="mt-6 text-xs text-muted-foreground">
-            Casale Monferrato (AL) · Piemonte · Lombardia · Liguria · Emilia Romagna · Toscana · Valle d&apos;Aosta
+            Casale Monferrato (AL) · Piemonte · Lombardia · Valle d&apos;Aosta · Liguria · Emilia Romagna · Toscana
           </p>
         </div>
       </div>
