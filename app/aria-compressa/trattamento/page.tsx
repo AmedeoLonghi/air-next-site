@@ -260,6 +260,12 @@ export default function Trattamento() {
                     tempo con l&apos;invecchiamento delle fibre, in modo non sempre visibile senza
                     monitoraggio del PDP in uscita.
                   </p>
+                  <p className="text-sm border-l-2 border-border pl-4">
+                    Il degrado delle prestazioni di un essiccatore a membrana è misurabile
+                    solo con strumentazione dedicata. Un&apos;analisi periodica del punto di
+                    rugiada in linea è l&apos;unico modo per verificare che la membrana stia
+                    ancora lavorando entro le specifiche.
+                  </p>
                   <p>
                     Una prefiltrazione adeguata a monte della membrana è fondamentale: tracce
                     di olio o particolato fine danneggiano le fibre in modo irreversibile.
@@ -304,15 +310,20 @@ export default function Trattamento() {
                 specifica. Progettare il sistema di trattamento senza avere il requisito
                 ISO di destinazione significa non avere un criterio oggettivo di selezione.
               </p>
-            </div>
-            <div className="mt-8">
-              <Link
-                href="/ottimizza/analisi-qualita-aria"
-                className={cn(buttonVariants({ variant: "outline", size: "sm" }), "gap-1")}
-              >
-                Analisi qualità aria compressa ISO 8573
-                <ArrowRight size={14} />
-              </Link>
+              <p>
+                Verificare che il sistema di trattamento installato stia effettivamente
+                producendo l&apos;aria alla classe richiesta è un passo separato dal
+                dimensionamento iniziale: le prestazioni degli essiccatori degradano nel
+                tempo, i filtri si saturano, e l&apos;aria di aspirazione cambia con le
+                stagioni. L&apos;analisi della qualità dell&apos;aria in linea è lo strumento che
+                chiude questo ragionamento.{" "}
+                <Link
+                  href="/ottimizza/analisi-qualita-aria"
+                  className="text-primary underline underline-offset-2 hover:no-underline"
+                >
+                  Come funziona l&apos;analisi qualità aria in linea
+                </Link>
+              </p>
             </div>
           </div>
         </section>
