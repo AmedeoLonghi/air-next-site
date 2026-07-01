@@ -41,7 +41,6 @@ const schema = {
 
 const tipologie = [
   {
-    n: "01",
     nome: "Compressori a vite",
     sottotitolo: "rotary screw",
     testo:
@@ -49,7 +48,6 @@ const tipologie = [
     href: "/aria-compressa/produzione/vite",
   },
   {
-    n: "02",
     nome: "Compressori a pistoni",
     sottotitolo: "reciprocating",
     testo:
@@ -57,7 +55,6 @@ const tipologie = [
     href: "/aria-compressa/produzione/pistoni",
   },
   {
-    n: "03",
     nome: "Compressori scroll",
     sottotitolo: "spirale eccentrica",
     testo:
@@ -65,7 +62,6 @@ const tipologie = [
     href: "/aria-compressa/produzione/scroll",
   },
   {
-    n: "04",
     nome: "Turbocompressori",
     sottotitolo: "centrifugo",
     testo:
@@ -132,9 +128,6 @@ export default function Produzione() {
                   href={t.href}
                   className="rounded-xl border border-border bg-card p-6 flex flex-col gap-3 transition-colors hover:bg-muted/60"
                 >
-                  <div className="text-4xl font-bold text-primary/15 tabular-nums leading-none mb-1">
-                    {t.n}
-                  </div>
                   <div>
                     <h3 className="font-semibold text-base">{t.nome}</h3>
                     <p className="text-xs text-muted-foreground mt-0.5 uppercase tracking-wide">{t.sottotitolo}</p>

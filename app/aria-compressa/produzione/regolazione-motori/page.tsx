@@ -46,11 +46,6 @@ const modalitaRegolazione = [
       "Il sistema più diffuso sui compressori a vite tradizionali. Il motore resta acceso; quando la pressione raggiunge il valore massimo, la valvola di aspirazione chiude e il compressore smette di produrre aria ma continua ad assorbire energia, indicativamente tra il 20% e il 35% della potenza nominale a vuoto, a seconda della macchina. Logica robusta, ma penalizzante dal punto di vista energetico se la macchina passa molto tempo a vuoto.",
   },
   {
-    titolo: "Modulante",
-    testo:
-      "La valvola di aspirazione viene parzializzata per ridurre la portata. Riduce la portata prodotta, ma l'assorbimento elettrico non cala in proporzione. Utile in condizioni specifiche, da non confondere con l'efficienza reale di un inverter ben dimensionato.",
-  },
-  {
     titolo: "VSD: velocità variabile",
     testo:
       "La portata viene regolata variando il numero di giri del gruppo vite in funzione della richiesta reale. Riduce i cicli carico/vuoto, mantiene la pressione stabile, si adatta alla domanda variabile dello stabilimento.",
@@ -97,7 +92,7 @@ export default function RegolazioneMotori() {
             <p className="text-muted-foreground leading-relaxed max-w-3xl mb-12">
               {regolazioneIntro}
             </p>
-            <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+            <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
               {modalitaRegolazione.map((m) => (
                 <div
                   key={m.titolo}
