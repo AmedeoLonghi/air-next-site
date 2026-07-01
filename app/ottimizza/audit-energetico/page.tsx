@@ -5,6 +5,7 @@ import { Footer } from "@/components/layout/footer";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { ArrowRight } from "lucide-react";
+import { CompressorCalculator } from "@/components/sections/compressor-calculator";
 
 export const metadata: Metadata = {
   title: "Audit Energetico Compressori | Air-next",
@@ -154,6 +155,16 @@ export default function AuditEnergetico() {
                 </div>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* Calcolatore profilo energetico */}
+        <section className="py-20 sm:py-24">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl font-bold tracking-tight sm:text-3xl mb-10">
+              Stima il profilo energetico del tuo impianto
+            </h2>
+            <CompressorCalculator ctaContext="audit" />
           </div>
         </section>
 

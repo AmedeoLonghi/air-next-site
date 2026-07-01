@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { IeMotorChart } from "@/components/sections/ie-motor-chart";
+import { CompressorCalculator } from "@/components/sections/compressor-calculator";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { ArrowRight } from "lucide-react";
@@ -365,6 +366,16 @@ export default function Produzione() {
               </div>
 
             </div>
+          </div>
+        </section>
+
+        {/* Calcolatore profilo energetico */}
+        <section className="py-20 sm:py-24">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl font-bold tracking-tight sm:text-3xl mb-10">
+              Stima il profilo energetico del tuo impianto
+            </h2>
+            <CompressorCalculator ctaContext="produzione" />
           </div>
         </section>
 
