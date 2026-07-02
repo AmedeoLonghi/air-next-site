@@ -39,35 +39,13 @@ const schema = {
   serviceType: "Reti Distribuzione Aria Compressa",
 };
 
-const materiali = [
-  {
-    nome: "Acciaio zincato",
-    testo:
-      "Soluzione diffusa negli impianti storici. Resistente meccanicamente, ma soggetto a corrosione interna nel tempo: la ruggine si accumula nei punti di raccolta e può contaminare l'aria distribuita. Gli impianti in acciaio che superano un certo grado di degrado richiedono una sostituzione completa per garantire la qualità dell'aria.",
-  },
-  {
-    nome: "Alluminio",
-    testo:
-      "Standard attuale per le nuove installazioni industriali. Leggero, facile da installare con sistemi a innesto, immune alla corrosione interna. I raccordi a compressione consentono ampliamenti e modifiche senza saldatura. Disponibile in varie sezioni da piccoli laboratori a centrali ad alta portata.",
-  },
-  {
-    nome: "Polietilene (PE)",
-    testo:
-      "Utilizzato per reti con pressioni moderate e in ambienti dove la leggerezza e la resistenza chimica sono prioritarie. Non adatto per pressioni elevate o ambienti ad alta temperatura. Installazione rapida per tratti di distribuzione secondaria.",
-  },
-];
-
-const topologie = [
-  {
-    nome: "Anello di distribuzione (ring main)",
-    testo:
-      "La rete forma un circuito chiuso attorno all'area servita. L'aria arriva all'utenza da due direzioni, stabilizzando la pressione in tutto l'anello e riducendo la sensibilità ai picchi di domanda localizzati. Soluzione preferita per impianti con utenze distribuite su ampia superficie o con profili di carico variabili.",
-  },
-  {
-    nome: "Rete ramificata",
-    testo:
-      "Distribuisce l'aria da una linea principale verso diramazioni secondarie. Più semplice da installare ma più sensibile alle perdite di carico: le utenze in fondo alle diramazioni lunghe ricevono aria a pressione inferiore rispetto a quelle vicine alla centrale. Adatta per impianti compatti con utenze concentrate in zone definite.",
-  },
+const perditeDiametro = [
+  { diametro: "1 mm", portata: "1,2 l/min" },
+  { diametro: "2 mm", portata: "5,0 l/min" },
+  { diametro: "3 mm", portata: "11,1 l/min" },
+  { diametro: "5 mm", portata: "30,9 l/min" },
+  { diametro: "8 mm", portata: "79,0 l/min" },
+  { diametro: "10 mm", portata: "123,8 l/min" },
 ];
 
 export default function Distribuzione() {
@@ -110,81 +88,132 @@ export default function Distribuzione() {
           </div>
         </section>
 
-        {/* ── Perdite di carico ── */}
+        {/* ── Perdite di carico e costo energetico ── */}
         <section className="py-20 sm:py-24 bg-muted/40">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl">
               <h2 className="text-2xl font-bold tracking-tight sm:text-3xl mb-8">
                 Perdite di carico e costo energetico
               </h2>
+              <p className="text-muted-foreground leading-relaxed">
+                Una perdita di carico lungo la rete non è solo un problema di portata: è un costo
+                energetico diretto. Per garantire la pressione corretta al punto di utilizzo più
+                lontano o più critico, il compressore deve lavorare a una pressione di mandata
+                superiore a quella realmente necessaria, per compensare quello che si perde lungo
+                il percorso. L&apos;aumento di consumo energetico per ogni bar di pressione in eccesso
+                si attesta, secondo dati di settore convergenti, tra il 7% e l&apos;8%. Una rete
+                sottodimensionata o con troppe curve strette non produce solo un problema di
+                prestazione a valle: si traduce direttamente in un compressore che lavora a una
+                pressione più alta di quanto servirebbe, con un costo energetico che si somma ora
+                per ora, tutto l&apos;anno.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* ── Configurazione di rete ── */}
+        <section className="py-20 sm:py-24">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="max-w-3xl">
+              <h2 className="text-2xl font-bold tracking-tight sm:text-3xl mb-8">
+                Configurazione di rete
+              </h2>
+              <p className="text-muted-foreground leading-relaxed">
+                Le reti di distribuzione che progettiamo seguono la configurazione ad anello chiuso:
+                ogni punto di prelievo riceve aria da due direzioni, la caduta di pressione lungo la
+                rete resta più uniforme, e i tratti a fondo cieco dove la condensa ristagna vengono
+                eliminati alla radice. È una scelta progettuale, non un&apos;opzione da valutare caso
+                per caso.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* ── Materiali e giunzioni ── */}
+        <section className="py-20 sm:py-24 bg-muted/40">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="max-w-3xl">
+              <h2 className="text-2xl font-bold tracking-tight sm:text-3xl mb-8">
+                Materiali e giunzioni
+              </h2>
               <div className="space-y-5 text-muted-foreground leading-relaxed">
                 <p>
-                  Ogni metro di tubazione, ogni raccordo, ogni valvola introduce una
-                  resistenza al flusso che si traduce in una caduta di pressione.
-                  La somma di queste perdite determina la pressione differenziale
-                  tra la centrale e l&apos;utenza più lontana.
+                  La scelta del materiale e della tecnologia di giunzione incide sui costi di
+                  installazione, sulla manutenibilità futura della rete e sulla qualità
+                  dell&apos;aria trattata.
                 </p>
                 <p>
-                  Quando la perdita di carico è elevata, il compressore deve
-                  lavorare a pressione più alta per garantire la pressione minima
-                  all&apos;utenza. Ogni bar di pressione aggiuntivo al compressore
-                  corrisponde a un incremento proporzionale del consumo energetico.
-                  Una rete mal dimensionata non è solo un problema di pressione:
-                  è un costo energetico che si accumula per tutta la vita dell&apos;impianto.
+                  I raccordi a pressare si installano a freddo con una pinza dedicata, senza
+                  saldatura: la tenuta si ottiene per deformazione meccanica del raccordo sul tubo.
+                  La velocità di posa e l&apos;assenza di fiamma libera li rendono adatti dove i tempi
+                  di installazione sono stretti o l&apos;ambiente ha vincoli antincendio.
                 </p>
                 <p>
-                  La velocità del flusso nella tubazione è il parametro principale
-                  di dimensionamento. Per contenere le perdite di carico nella rete
-                  principale, la velocità dell&apos;aria non dovrebbe superare 6–8 m/s.
-                  Nelle diramazioni verso le utenze si possono accettare velocità
-                  più alte per tratti corti.
+                  Le tubazioni saldate restano la soluzione più affidabile sul lungo periodo: la
+                  giunzione diventa parte integrante del tubo, senza punti di potenziale cedimento
+                  meccanico nel tempo. Richiedono saldatore qualificato e un collaudo di tenuta
+                  prima della messa in esercizio, ha senso quando la rete è definitiva e non
+                  prevede modifiche frequenti.
+                </p>
+                <p>
+                  I raccordi componibili in alluminio usano un sistema modulare a incastro, senza
+                  saldatura né filettatura. Il vantaggio reale non è il costo di acquisto, più alto
+                  dell&apos;acciaio nero a parità di diametro, ma la possibilità di modificare la rete
+                  nel tempo, aggiungendo o spostando derivazioni senza fermare l&apos;impianto.
+                </p>
+                <p>
+                  Gli innesti rapidi per polietilene si usano interrati o dove serve resistenza
+                  chimica e leggerezza, con tenuta a compressione o elettrosaldatura a seconda del
+                  diametro e delle condizioni di posa.
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* ── Materiali ── */}
+        {/* ── Quanto costa una perdita, per dimensione ── */}
         <section className="py-20 sm:py-24">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <h2 className="text-2xl font-bold tracking-tight sm:text-3xl mb-10">
-              Materiali per le reti di distribuzione
-            </h2>
-            <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
-              {materiali.map((m) => (
-                <div
-                  key={m.nome}
-                  className="rounded-xl border border-border bg-card p-6 flex flex-col gap-3"
-                >
-                  <h3 className="font-semibold text-base">{m.nome}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{m.testo}</p>
-                </div>
-              ))}
+            <div className="max-w-3xl">
+              <h2 className="text-2xl font-bold tracking-tight sm:text-3xl mb-10">
+                Quanto costa una perdita, per dimensione
+              </h2>
+              <div className="overflow-x-auto mb-6">
+                <table className="w-full text-sm border-collapse">
+                  <thead>
+                    <tr className="border-b border-border">
+                      <th className="text-left py-3 pr-12 font-semibold">Diametro perdita</th>
+                      <th className="text-left py-3 font-semibold">Portata dispersa a 6 bar</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-border">
+                    {perditeDiametro.map((r) => (
+                      <tr key={r.diametro}>
+                        <td className="py-3 pr-12 font-medium text-foreground">{r.diametro}</td>
+                        <td className="py-3 text-muted-foreground">{r.portata}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <p className="text-sm text-muted-foreground leading-relaxed mb-8">
+                La portata dispersa cresce in modo non lineare con il diametro: una perdita da 5 mm
+                non è cinque volte peggiore di una da 1 mm, ma quasi trenta volte peggiore. Il costo
+                annuale dipende anche da pressione di esercizio, ore di funzionamento e prezzo
+                dell&apos;energia.
+              </p>
+              <Link
+                href="/ottimizza/ricerca-perdite"
+                className={cn(buttonVariants({ size: "lg" }), "gap-2")}
+              >
+                Calcola il costo delle tue perdite
+                <ArrowRight size={16} />
+              </Link>
             </div>
           </div>
         </section>
 
-        {/* ── Topologie ── */}
-        <section className="py-20 sm:py-24 bg-muted/40">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <h2 className="text-2xl font-bold tracking-tight sm:text-3xl mb-10">
-              Topologie di rete
-            </h2>
-            <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
-              {topologie.map((t) => (
-                <div
-                  key={t.nome}
-                  className="rounded-xl border border-border bg-card p-6 flex flex-col gap-3"
-                >
-                  <h3 className="font-semibold text-base">{t.nome}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{t.testo}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ── Interventi su impianti esistenti ── */}
+        {/* ── Interventi su reti esistenti ── */}
         <section className="py-20 sm:py-24">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="max-w-3xl">
