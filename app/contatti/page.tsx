@@ -17,6 +17,7 @@ export const metadata: Metadata = {
 const areaServita = [
   "Piemonte",
   "Lombardia",
+  "Valle d'Aosta",
   "Liguria",
   "Emilia Romagna",
   "Toscana",

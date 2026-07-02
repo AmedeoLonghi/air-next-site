@@ -35,7 +35,7 @@ const schema = {
       addressCountry: "IT",
     },
   },
-  areaServed: ["Piemonte", "Lombardia", "Liguria", "Emilia-Romagna", "Toscana"],
+  areaServed: ["Piemonte", "Lombardia", "Valle d'Aosta", "Liguria", "Emilia Romagna", "Toscana"],
   serviceType: "Compressori a Vite Industriali",
   keywords: [
     "compressori a vite industriali",
@@ -263,7 +263,7 @@ export default function CompressioneVite() {
                 </Link>
               </div>
               <p className="mt-5 text-sm text-muted-foreground">
-                Interveniamo in Piemonte, Lombardia, Liguria, Emilia Romagna e Toscana.
+                Interveniamo in Piemonte, Lombardia, Valle d'Aosta, Liguria, Emilia Romagna e Toscana.
               </p>
             </div>
           </div>
