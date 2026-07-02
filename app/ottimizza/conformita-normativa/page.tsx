@@ -65,7 +65,7 @@ const steps = [
     n: "01",
     titolo: "Censimento attrezzature",
     testo:
-      "Identifichiamo compressori, serbatoi, recipienti, essiccatori e insiemi presenti nell'impianto. Verifichiamo quali rientrano nel campo di applicazione del DM 329/2004 in funzione di pressione, volume e tipo di fluido.",
+      "Identifichiamo compressori, serbatoi, recipienti, essiccatori e insiemi presenti nell'impianto. Valutiamo quali rientrano nel campo di applicazione del DM 329/2004 in funzione di pressione, volume e tipo di fluido.",
   },
   {
     n: "02",
@@ -206,6 +206,64 @@ export default function ConformitaNormativa() {
                   </p>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── Controlli non distruttivi e verifiche spessimetriche ── */}
+        <section className="py-20 sm:py-24">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="max-w-3xl">
+              <h2 className="text-2xl font-bold tracking-tight sm:text-3xl mb-8">
+                Controlli non distruttivi e verifiche spessimetriche
+              </h2>
+              <p className="text-muted-foreground leading-relaxed">
+                Sui recipienti a pressione, la parete può assottigliarsi nel tempo per corrosione
+                interna o esterna, un fenomeno che un esame visivo da solo non rileva sempre in
+                modo affidabile. Il controllo spessimetrico misura lo spessore reale della parete
+                tramite ultrasuoni, confrontandolo con quello di progetto. Coordiniamo
+                l&apos;esecuzione di questi controlli non distruttivi, insieme a prova di tenuta
+                e prova vacuometrica, tramite tecnico qualificato di secondo livello secondo la
+                norma UNI EN ISO 9712.
+              </p>
+              <div className="mt-8">
+                <Link
+                  href="/contatti"
+                  className={cn(buttonVariants({ size: "sm" }), "gap-1")}
+                >
+                  Richiedi una verifica spessimetrica
+                  <ArrowRight size={14} />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── Dimensionamento e fornitura valvole di sicurezza ── */}
+        <section className="py-20 sm:py-24 bg-muted/40">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div className="max-w-3xl">
+              <h2 className="text-2xl font-bold tracking-tight sm:text-3xl mb-8">
+                Dimensionamento e fornitura valvole di sicurezza
+              </h2>
+              <p className="text-muted-foreground leading-relaxed">
+                Ogni recipiente a pressione deve essere protetto da una valvola di sicurezza
+                dimensionata sulla base della portata di scarico effettiva, non su un valore
+                generico da catalogo. Il calcolo segue la norma UNI EN ISO 4126-7 e tiene conto
+                della pressione massima ammissibile, del volume del recipiente e delle condizioni
+                di esercizio, incluso lo scenario di incendio quando applicabile. Coordiniamo il
+                dimensionamento e la fornitura della valvola corretta per ogni recipiente
+                installato.
+              </p>
+              <div className="mt-8">
+                <Link
+                  href="/contatti"
+                  className={cn(buttonVariants({ size: "sm" }), "gap-1")}
+                >
+                  Verifica il dimensionamento delle tue valvole
+                  <ArrowRight size={14} />
+                </Link>
+              </div>
             </div>
           </div>
         </section>
