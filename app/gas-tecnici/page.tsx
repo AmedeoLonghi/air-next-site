@@ -7,13 +7,13 @@ import { cn } from "@/lib/utils";
 import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Generatori Azoto e Ossigeno On-site | Air-next",
+  title: "Generatori Azoto e Ossigeno Industriale On-site | Air-next",
   description:
-    "Generatori di azoto e ossigeno on-site con tecnologia PSA. Produzione autonoma di gas tecnici con purezza controllata e costi operativi documentati.",
+    "Generatori azoto e ossigeno on-site per applicazioni industriali, tecnologia PSA. Produzione autonoma con purezza controllata e costi documentati.",
   openGraph: {
-    title: "Generatori Azoto e Ossigeno On-site | Air-next",
+    title: "Generatori Azoto e Ossigeno Industriale On-site | Air-next",
     description:
-      "Generatori di azoto e ossigeno on-site con tecnologia PSA. Produzione autonoma di gas tecnici con purezza controllata e costi operativi documentati.",
+      "Generatori azoto e ossigeno on-site per applicazioni industriali, tecnologia PSA. Produzione autonoma con purezza controllata e costi documentati.",
   },
 };
 
@@ -276,6 +276,15 @@ export default function GasTecnici() {
                   Il treno di trattamento (essiccatore + filtri) fa parte del
                   sistema e va dimensionato insieme al generatore.
                 </p>
+              </div>
+              <div className="mt-8">
+                <Link
+                  href="/aria-compressa/trattamento"
+                  className={cn(buttonVariants({ variant: "outline", size: "sm" }), "gap-1")}
+                >
+                  Filtrazione ed essiccazione dell&apos;aria compressa
+                  <ArrowRight size={14} />
+                </Link>
               </div>
             </div>
           </div>

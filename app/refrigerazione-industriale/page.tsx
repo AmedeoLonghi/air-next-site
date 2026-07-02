@@ -7,13 +7,13 @@ import { cn } from "@/lib/utils";
 import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Refrigerazione Industriale | Chiller e Sistemi di Raffreddamento | Air-next",
+  title: "Refrigerazione Industriale Aria Compressa | Chiller | Air-next",
   description:
-    "Sistemi di refrigerazione industriale per processi produttivi. Chiller, free cooling e soluzioni a noleggio. Manutenzione e assistenza tecnica su qualsiasi sistema installato.",
+    "Refrigerazione industriale per aria compressa e processi produttivi: chiller, free cooling, noleggio. Manutenzione su qualsiasi sistema installato.",
   openGraph: {
-    title: "Refrigerazione Industriale | Chiller e Sistemi di Raffreddamento | Air-next",
+    title: "Refrigerazione Industriale Aria Compressa | Chiller | Air-next",
     description:
-      "Sistemi di refrigerazione industriale per processi produttivi. Chiller, free cooling e soluzioni a noleggio. Manutenzione e assistenza tecnica su qualsiasi sistema installato.",
+      "Refrigerazione industriale per aria compressa e processi produttivi: chiller, free cooling, noleggio. Manutenzione su qualsiasi sistema installato.",
   },
 };
 
@@ -213,6 +213,15 @@ export default function RefrigerazioneIndustriale() {
                   conversione o sostituzione in funzione dell&apos;età e dello stato
                   dell&apos;impianto.
                 </p>
+              </div>
+              <div className="mt-8">
+                <Link
+                  href="/ottimizza/audit-energetico"
+                  className={cn(buttonVariants({ variant: "outline", size: "sm" }), "gap-1")}
+                >
+                  Come valutiamo il consumo della centrale a compressori
+                  <ArrowRight size={14} />
+                </Link>
               </div>
             </div>
           </div>
