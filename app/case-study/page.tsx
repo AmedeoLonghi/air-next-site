@@ -50,8 +50,23 @@ const caseStudies = [
       "Il profilo di carico mostrava un picco produttivo durante i giorni lavorativi e un consumo residuo domenicale di 6,5 m³/min (perdite di rete). La macchina da 160 kW, ottimizzata per il picco, lavorava in condizioni di scarsa efficienza durante il 49% del tempo. La configurazione modulare con una macchina base più una di supporto per i picchi ha consentito di ridurre il consumo medio senza perdere la copertura del picco.",
   },
   {
-    settore: "Componentistica industriale",
-    luogo: "Provincia di Novara",
+    settore: "Lavorazioni meccaniche",
+    luogo: "Provincia di Alessandria",
+    tag: "Audit energetico",
+    titolo: "Compressore VSD da 37 kW su tre turni: risparmio fino a €8.677/anno con motore IE5",
+    impianto: "1 compressore VSD da 37 kW, produzione su tre turni",
+    metriche: [
+      { label: "Portata media rilevata", value: "2,3–2,7 m³/min · 98,5% del tempo in carico attivo" },
+      { label: "Distribuzione carico", value: "79,1% del tempo nel range 25–50% della capacità" },
+      { label: "Costo energetico annuale stimato", value: "€ 35.771" },
+      { label: "Risparmio con tecnologia IE5", value: "fino a € 8.677/anno (riduzione 24,3%)" },
+    ],
+    analisi:
+      "Il monitoraggio su ciclo a tre turni ha rilevato un compressore in carico attivo per il 98,5% del tempo, con il 79,1% delle ore nel range 25-50% della capacità nominale. L'impianto lavora in continuo ma prevalentemente a basso carico parziale: la fascia in cui la classe di efficienza del motore incide maggiormente sul consumo orario. La sostituzione del motore con tecnologia IE5, senza intervenire sulla macchina esistente, è risultata l'intervento con il miglior rapporto tra investimento e risparmio annuo.",
+  },
+  {
+    settore: "Trasformazione materie plastiche",
+    luogo: "Provincia di Vercelli",
     tag: "Ricerca perdite",
     titolo: "15 dispersioni per 2.943 euro annui su impianto con 2.000 ore di funzionamento",
     impianto: "Rete di distribuzione di piccola taglia, 15 punti di dispersione identificati con rilevamento a ultrasuoni",
@@ -65,7 +80,7 @@ const caseStudies = [
       "Il rilievo ha evidenziato una presenza significativa di raccordi ad innesto rapido e tubazioni usurate, con dispersioni difficilmente identificabili senza strumentazione a causa dei continui flussi d'aria necessari al processo produttivo. Il report ha permesso di pianificare la sostituzione progressiva dei componenti deteriorati per priorità economica.",
   },
   {
-    settore: "Lavorazioni meccaniche e CNC",
+    settore: "Produzione di materiali isolanti",
     luogo: "Provincia di Alessandria",
     tag: "Ricerca perdite",
     titolo: "19 dispersioni su tre aree produttive: 879 l/min di aria dispersa identificata e classificata",
