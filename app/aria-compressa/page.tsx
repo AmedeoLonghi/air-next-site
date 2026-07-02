@@ -4,7 +4,7 @@ import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { Settings, Filter, Network, ScanSearch, ArrowRight } from "lucide-react";
+import { Settings, Filter, Network, ScanSearch, ArrowRight, Phone } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Impianti Aria Compressa | Air-next",
@@ -135,7 +135,7 @@ export default function AriaCompressa() {
                   qualità e compatibilità.
                 </p>
               </div>
-              <div className="mt-10">
+              <div className="mt-10 flex flex-wrap gap-4 items-center">
                 <Link
                   href="/contatti"
                   className={cn(buttonVariants({ size: "lg" }), "gap-2")}
@@ -143,6 +143,13 @@ export default function AriaCompressa() {
                   Richiedi un sopralluogo
                   <ArrowRight size={16} />
                 </Link>
+                <a
+                  href="tel:+390142578069"
+                  className={cn(buttonVariants({ variant: "outline", size: "lg" }), "gap-2")}
+                >
+                  <Phone size={16} />
+                  Chiamaci ora
+                </a>
               </div>
               <p className="mt-5 text-sm text-muted-foreground">
                 Interveniamo in Piemonte, Lombardia, Valle d'Aosta, Liguria, Emilia Romagna e Toscana.

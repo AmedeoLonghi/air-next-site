@@ -4,7 +4,7 @@ import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Phone } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Impianti Distribuzione Aria Compressa | Air-next",
@@ -75,7 +75,7 @@ export default function Distribuzione() {
                 per compensare. Progettiamo e realizziamo reti di distribuzione
                 dimensionate per la portata reale e intervenismo su impianti esistenti.
               </p>
-              <div className="mt-10">
+              <div className="mt-10 flex flex-wrap gap-4 items-center">
                 <Link
                   href="/contatti"
                   className={cn(buttonVariants({ size: "lg" }), "gap-2")}
@@ -83,6 +83,13 @@ export default function Distribuzione() {
                   Richiedi un sopralluogo
                   <ArrowRight size={16} />
                 </Link>
+                <a
+                  href="tel:+390142578069"
+                  className={cn(buttonVariants({ variant: "outline", size: "lg" }), "gap-2")}
+                >
+                  <Phone size={16} />
+                  Chiamaci ora
+                </a>
               </div>
             </div>
           </div>
@@ -267,7 +274,7 @@ export default function Distribuzione() {
                 perdite di carico, analisi della topologia esistente e proposta
                 di intervento basata sui dati rilevati.
               </p>
-              <div className="mt-8">
+              <div className="mt-8 flex flex-wrap gap-4 items-center">
                 <Link
                   href="/contatti"
                   className={cn(buttonVariants({ size: "lg" }), "gap-2")}
@@ -275,6 +282,13 @@ export default function Distribuzione() {
                   Richiedi un sopralluogo
                   <ArrowRight size={16} />
                 </Link>
+                <a
+                  href="tel:+390142578069"
+                  className={cn(buttonVariants({ variant: "outline", size: "lg" }), "gap-2")}
+                >
+                  <Phone size={16} />
+                  Chiamaci ora
+                </a>
               </div>
               <p className="mt-5 text-sm text-muted-foreground">
                 Interveniamo in Piemonte, Lombardia, Valle d'Aosta, Liguria, Emilia Romagna e Toscana.

@@ -4,7 +4,7 @@ import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Phone } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Compressori a Vite | Air-next",
@@ -71,7 +71,7 @@ export default function CompressioneVite() {
                 servizio continuativo e alla disponibilità in configurazioni che coprono range di
                 portata e pressione molto ampi.
               </p>
-              <div className="mt-10">
+              <div className="mt-10 flex flex-wrap gap-4 items-center">
                 <Link
                   href="/contatti"
                   className={cn(buttonVariants({ size: "lg" }), "gap-2")}
@@ -79,6 +79,13 @@ export default function CompressioneVite() {
                   Richiedi un sopralluogo
                   <ArrowRight size={16} />
                 </Link>
+                <a
+                  href="tel:+390142578069"
+                  className={cn(buttonVariants({ variant: "outline", size: "lg" }), "gap-2")}
+                >
+                  <Phone size={16} />
+                  Chiamaci ora
+                </a>
               </div>
             </div>
           </div>

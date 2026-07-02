@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 
 const navLinks = [
   { label: "Aria Compressa", href: "/aria-compressa" },
@@ -39,13 +39,20 @@ export function Navbar() {
           ))}
         </ul>
 
-        <div className="hidden md:flex items-center">
+        <div className="hidden md:flex items-center gap-3">
           <Link
             href="/contatti"
             className={cn(buttonVariants({ size: "sm" }))}
           >
             Richiedi un sopralluogo
           </Link>
+          <a
+            href="tel:+390142578069"
+            className={cn(buttonVariants({ variant: "outline", size: "sm" }), "gap-1.5")}
+          >
+            <Phone size={14} />
+            Chiamaci ora
+          </a>
         </div>
 
         <button
@@ -69,7 +76,7 @@ export function Navbar() {
               {link.label}
             </Link>
           ))}
-          <div className="pt-3">
+          <div className="pt-3 flex flex-col gap-2">
             <Link
               href="/contatti"
               className={cn(buttonVariants({ size: "sm" }), "w-full justify-center")}
@@ -77,6 +84,13 @@ export function Navbar() {
             >
               Richiedi un sopralluogo
             </Link>
+            <a
+              href="tel:+390142578069"
+              className={cn(buttonVariants({ variant: "outline", size: "sm" }), "w-full justify-center gap-1.5")}
+            >
+              <Phone size={14} />
+              Chiamaci ora
+            </a>
           </div>
         </div>
       )}

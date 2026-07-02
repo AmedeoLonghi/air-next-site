@@ -5,7 +5,7 @@ import { Footer } from "@/components/layout/footer";
 import { buttonVariants } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Phone } from "lucide-react";
 import { LeakCalculator } from "@/components/sections/LeakCalculator";
 
 export const metadata: Metadata = {
@@ -121,7 +121,7 @@ export default function RicercaPerdite() {
                 direttamente in consumo energetico aggiuntivo del compressore, che lavora di
                 più per compensare aria che non arriva mai all&apos;utenza.
               </p>
-              <div className="mt-10">
+              <div className="mt-10 flex flex-wrap gap-4 items-center">
                 <Link
                   href="/contatti"
                   className={cn(buttonVariants({ size: "lg" }), "gap-2")}
@@ -129,6 +129,13 @@ export default function RicercaPerdite() {
                   Richiedi un sopralluogo
                   <ArrowRight size={16} />
                 </Link>
+                <a
+                  href="tel:+390142578069"
+                  className={cn(buttonVariants({ variant: "outline", size: "lg" }), "gap-2")}
+                >
+                  <Phone size={16} />
+                  Chiamaci ora
+                </a>
               </div>
             </div>
           </div>
@@ -287,6 +294,13 @@ export default function RicercaPerdite() {
                   Vedi tutti i casi studio
                   <ArrowRight size={16} />
                 </Link>
+                <a
+                  href="tel:+390142578069"
+                  className={cn(buttonVariants({ variant: "outline", size: "lg" }), "gap-2")}
+                >
+                  <Phone size={16} />
+                  Chiamaci ora
+                </a>
               </div>
               <p className="mt-5 text-sm text-muted-foreground">
                 Interveniamo in Piemonte, Lombardia, Valle d'Aosta, Liguria, Emilia Romagna e Toscana.

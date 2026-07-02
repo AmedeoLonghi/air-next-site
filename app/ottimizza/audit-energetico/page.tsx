@@ -4,7 +4,7 @@ import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Phone } from "lucide-react";
 import { CompressorCalculator } from "@/components/sections/compressor-calculator";
 
 export const metadata: Metadata = {
@@ -123,7 +123,7 @@ export default function AuditEnergetico() {
                 consegniamo il profilo reale dell&apos;impianto con simulazione del costo
                 energetico annuale.
               </p>
-              <div className="mt-10">
+              <div className="mt-10 flex flex-wrap gap-4 items-center">
                 <Link
                   href="/contatti"
                   className={cn(buttonVariants({ size: "lg" }), "gap-2")}
@@ -131,6 +131,13 @@ export default function AuditEnergetico() {
                   Richiedi un sopralluogo
                   <ArrowRight size={16} />
                 </Link>
+                <a
+                  href="tel:+390142578069"
+                  className={cn(buttonVariants({ variant: "outline", size: "lg" }), "gap-2")}
+                >
+                  <Phone size={16} />
+                  Chiamaci ora
+                </a>
               </div>
             </div>
           </div>
@@ -261,6 +268,13 @@ export default function AuditEnergetico() {
                   Richiedi un sopralluogo
                   <ArrowRight size={16} />
                 </Link>
+                <a
+                  href="tel:+390142578069"
+                  className={cn(buttonVariants({ variant: "outline", size: "lg" }), "gap-2")}
+                >
+                  <Phone size={16} />
+                  Chiamaci ora
+                </a>
               </div>
               <p className="mt-5 text-sm text-muted-foreground">
                 Interveniamo in Piemonte, Lombardia, Valle d'Aosta, Liguria, Emilia Romagna e Toscana.

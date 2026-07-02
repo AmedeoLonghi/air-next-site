@@ -6,7 +6,7 @@ import { IeMotorChart } from "@/components/sections/ie-motor-chart";
 import { CompressorCalculator } from "@/components/sections/compressor-calculator";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Phone } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Compressori Aria Compressa | Fornitura e Manutenzione | Air-next",
@@ -138,7 +138,7 @@ export default function Produzione() {
                 Selezioniamo in funzione del profilo di portata effettivo, non della
                 taglia massima stimata. Interveniamo su qualsiasi macchina installata.
               </p>
-              <div className="mt-10">
+              <div className="mt-10 flex flex-wrap gap-4 items-center">
                 <Link
                   href="/contatti"
                   className={cn(buttonVariants({ size: "lg" }), "gap-2")}
@@ -146,6 +146,13 @@ export default function Produzione() {
                   Richiedi un sopralluogo
                   <ArrowRight size={16} />
                 </Link>
+                <a
+                  href="tel:+390142578069"
+                  className={cn(buttonVariants({ variant: "outline", size: "lg" }), "gap-2")}
+                >
+                  <Phone size={16} />
+                  Chiamaci ora
+                </a>
               </div>
             </div>
           </div>
@@ -389,6 +396,13 @@ export default function Produzione() {
                   Parti dall&apos;audit energetico
                   <ArrowRight size={16} />
                 </Link>
+                <a
+                  href="tel:+390142578069"
+                  className={cn(buttonVariants({ variant: "outline", size: "lg" }), "gap-2")}
+                >
+                  <Phone size={16} />
+                  Chiamaci ora
+                </a>
               </div>
               <p className="mt-5 text-sm text-muted-foreground">
                 Interveniamo in Piemonte, Lombardia, Valle d'Aosta, Liguria, Emilia Romagna e Toscana.
